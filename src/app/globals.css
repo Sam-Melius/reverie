@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,3 +25,76 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.glitch {
+  position: relative;
+  color: (0,82,220);
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.glitch::before {
+  animation: glitchTop 1.5s infinite linear alternate-reverse;
+  color: #facc15;
+  top: -1px;
+}
+.glitch::after {
+  animation: glitchBottom 1.5s infinite linear alternate-reverse;
+  color: #facc15;
+  top: 1px;
+}
+@keyframes glitchTop {
+  0% {
+    clip-path: inset(0 0 80% 0);
+  }
+  100% {
+    clip-path: inset(0 0 20% 0);
+  }
+}
+@keyframes glitchBottom {
+  0% {
+    clip-path: inset(80% 0 0 0);
+  }
+  100% {
+    clip-path: inset(20% 0 0 0);
+  }
+}
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-down {
+  animation: fade-down 0.3s ease-out;
+}
+@keyframes scan-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.scanlines {
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
+  animation: scan-move 15s linear infinite;
+}
+
+
