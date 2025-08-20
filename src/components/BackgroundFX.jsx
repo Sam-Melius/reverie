@@ -24,7 +24,7 @@ export default function BackgroundFX() {
         className="absolute -top-24 -left-24 w-[480px] h-[480px] rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(250,204,21,0.18), transparent 70%)",
+            "radial-gradient(closest-side, rgba(0,82,220,0.18), transparent 70%)",
         }}
         animate={{ x: [0, 80, -40, 0], y: [0, -40, 60, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
@@ -33,7 +33,7 @@ export default function BackgroundFX() {
         className="absolute bottom-[-120px] right-[-120px] w-[520px] h-[520px] rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(255,255,255,0.10), transparent 70%)",
+            "radial-gradient(closest-side, rgba(0,255,255,0.10), transparent 70%)", // turquoise
         }}
         animate={{ x: [0, -60, 40, 0], y: [0, 50, -30, 0] }}
         transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
@@ -42,16 +42,20 @@ export default function BackgroundFX() {
         className="absolute top-1/3 right-1/4 w-[360px] h-[360px] rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(250,204,21,0.10), transparent 70%)",
+            "radial-gradient(closest-side, rgba(0,82,220,0.10), transparent 70%)",
         }}
         animate={{ x: [0, 30, -20, 0], y: [0, 20, -25, 0] }}
         transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* 🔦 Radar sweep ring */}
-      <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-yellow-500/10 animate-spin-slow pointer-events-none" />
+      {/* Radar sweep ring */}
+      <motion.div
+        className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(0,255,255,0.1)]"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
+      />
 
-      {/* 📡 Scanlines */}
+      {/* Scanlines */}
       <div className="absolute inset-0 bg-[repeating-linear-gradient(transparent,transparent_1px,rgba(255,255,255,0.015)_2px)] z-[-1]" />
     </div>
   );
