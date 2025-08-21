@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { ServerCog, ShieldCheck, Lightbulb } from "lucide-react";
 
 const services = [
@@ -39,7 +39,7 @@ export default function CoreServices() {
 
         <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
-            <motion.div
+            <div
               key={i}
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -49,7 +49,7 @@ export default function CoreServices() {
               <div className="text-[color:var(--accent-alt)] text-3xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-[color:var(--primary)]">{service.title}</h3>
               <p className="mt-2 text-white/80">{service.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

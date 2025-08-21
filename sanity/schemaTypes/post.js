@@ -1,17 +1,62 @@
 export default {
-  name: "post",
-  title: "Blog Post",
-  type: "document",
+  name: 'post',
+  title: 'Post',
+  type: 'document',
   fields: [
-    { name: "title", type: "string" },
     {
-      name: "slug",
-      type: "slug",
-      options: { source: "title", maxLength: 96 },
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
     },
-    { name: "publishedAt", type: "datetime" },
-    { name: "mainImage", type: "image", options: { hotspot: true } },
-    { name: "excerpt", type: "text" },
-    { name: "body", type: "array", of: [{ type: "block" }] },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'publishedAt',
+      title: 'Published At',
+      type: 'datetime',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'author',
+      title: 'Author',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'mainImage',
+      title: 'Main Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description: 'Short preview text for summaries or cards.',
+    },
+    {
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [{ type: 'block' }, { type: 'image' }],
+      validation: (Rule) => Rule.required(),
+    },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      media: 'mainImage',
+    },
+  },
 };

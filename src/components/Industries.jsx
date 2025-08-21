@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import {
   Building,
   Hospital,
@@ -67,7 +67,7 @@ export default function Industries() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
         {industries.map((item, i) => (
-          <motion.div
+          <div
             key={i}
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function Industries() {
               </div>
               <p className="text-[#0056cc] text-sm">{item.text}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

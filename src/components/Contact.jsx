@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -111,14 +111,15 @@ export default function ContactForm() {
           </div>
         </form>
       ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="relative z-10 text-center text-xl text-yellow-400 font-semibold"
-        >
-          ✅ Thank you for your submission! We'll contact you soon with your free quote.
-        </motion.div>
+        // <motion.div
+        //   initial={{ opacity: 0, scale: 0.9 }}
+        //   animate={{ opacity: 1, scale: 1 }}
+        //   transition={{ duration: 0.6 }}
+        //   className="relative z-10 text-center text-xl text-yellow-400 font-semibold"
+        // >
+        //   ✅ Thank you for your submission! We'll contact you soon with your free quote.
+        // </motion.div>
+        <div>✅ Thank you for your submission! We'll contact you soon with your free quote.</div>
       )}
     </section>
   );

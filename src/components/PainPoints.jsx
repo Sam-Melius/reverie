@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { lexend } from "../styles/fonts";
 import { ShieldCheck, Cpu, AlertTriangle, Activity } from "lucide-react";
 
@@ -43,7 +43,7 @@ export default function PainPointsSection() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {painPoints.map((point, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function PainPointsSection() {
                 {point.title}
               </h3>
               <p className="text-gray-300 text-sm">{point.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
