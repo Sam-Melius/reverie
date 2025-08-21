@@ -1,22 +1,32 @@
-export const allPostsQuery = `
-  *[_type == "post"] | order(publishedAt desc){
-    _id,
-    title,
-    slug,
-    excerpt,
-    publishedAt,
-    mainImage,
-  }
-`;
-
-export const singlePostQuery = (slug) => `
-  *[_type == "post" && slug.current == "${slug}"][0]{
-    _id,
-    title,
-    slug,
-    excerpt,
-    publishedAt,
-    mainImage,
-    body
-  }
-`;
+export const allPostsQuery = `*[_type == "post"] | order(_createdAt desc){
+  _id,
+  title,
+  slug,
+  publishedAt,
+  excerpt,
+  mainImage {
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  "authorName": author->name,
+  "authorImage": author->image
+}`;
+export const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]{
+  _id,
+  title,
+  slug,
+  publishedAt,
+  body,
+  mainImage {
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  "authorName": author->name,
+  "authorImage": author->image
+}`;

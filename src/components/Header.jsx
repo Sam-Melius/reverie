@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ServerCog, ShieldCheck, Lightbulb } from "lucide-react";
-import { motion } from "framer-motion";
+
 
 export default function Header() {
   const pathname = usePathname();
@@ -34,7 +34,7 @@ export default function Header() {
             </span>
 
             {open && (
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: -10, scale: 0.96, rotateX: -15 }}
                 animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 transition={{ type: "spring", duration: 0.8, bounce: 0.5 }}
@@ -62,7 +62,7 @@ export default function Header() {
                   title="Innovate"
                   desc="Building tailored solutions to streamline operations and enhance user experiences."
                 />
-              </motion.div>
+              </div>
             )}
           </div>
 

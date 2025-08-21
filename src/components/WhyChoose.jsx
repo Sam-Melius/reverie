@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { ShieldCheck, Lightbulb, Users } from "lucide-react";
 
 const features = [
@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left Side */}
-        <motion.div
+        <div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
               Industries
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* Divider */}
         <div className="hidden md:flex justify-center items-center relative z-10">
@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
         {/* Right Side */}
         <div className="space-y-8">
           {features.map((f, i) => (
-            <motion.div
+            <div
               key={i}
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -81,7 +81,7 @@ export default function WhyChooseUs() {
                 <h3 className="text-xl font-bold mb-1">{f.title}</h3>
                 <p className="text-white/80 text-sm">{f.text}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
