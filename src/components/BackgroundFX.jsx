@@ -24,10 +24,10 @@ export default function BackgroundFX() {
         className="absolute -top-24 -left-24 w-[480px] h-[480px] rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(71, 241, 233, 0.93), transparent 30%)",
+            "radial-gradient(closest-side, rgba(71, 241, 233, 0.93), transparent 80%)",
         }}
         animate={{ x: [0, 80, -40, 0], y: [0, -40, 60, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       />
       <div
         className="absolute bottom-[-120px] right-[-120px] w-[520px] h-[520px] rounded-full blur-3xl"
@@ -36,7 +36,7 @@ export default function BackgroundFX() {
             "radial-gradient(closest-side, rgba(71, 241, 233, 0.93), transparent 60%)", // turquoise
         }}
         animate={{ x: [0, -60, 40, 0], y: [0, 50, -30, 0] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
       <div
         className="absolute top-1/3 right-1/4 w-[360px] h-[360px] rounded-full blur-3xl"
@@ -45,7 +45,7 @@ export default function BackgroundFX() {
             "radial-gradient(closest-side, rgba(71, 241, 233, 0.93), transparent 50%)",
         }}
         animate={{ x: [0, 30, -20, 0], y: [0, 20, -25, 0] }}
-        transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
       {/* Radar sweep ring */}

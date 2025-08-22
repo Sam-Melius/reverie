@@ -105,11 +105,11 @@ const handleHover = (index) => {
             <h3 className="text-xl font-semibold text-white mb-2">
               {point.title}
             </h3>
-<div className="relative h-20 w-full">
-  <p className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white/70 text-sm translate-y-2 group-hover:translate-y-0 pointer-events-none text-center px-2">
-    {point.description}
-  </p>
-</div>
+            <div className="relative h-20 w-full">
+              <p className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white/70 text-sm translate-y-2 group-hover:translate-y-0 pointer-events-none text-center px-2">
+                {point.description}
+              </p>
+            </div>
 
           </div>
         ))}
