@@ -45,20 +45,7 @@ export default function WhyChooseUs() {
           <p className="text-white/80 mb-6">
             Let’s transform your business with innovative technology solutions!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <a
-              href="#services"
-              className="bg-[color:var(--accent-alt-dark)] text-black font-bold py-3 px-6 rounded shadow hover:shadow-[0_0_20px_var(--accent-alt)] hover:bg-[color:var(--accent-alt)] transition shadow-lg"
-            >
-              Services
-            </a>
-            <a
-              href="#industries"
-              className="border border-[color:var(--accent-alt)] text-[color:var(--accent-alt)] font-bold py-3 px-6 rounded hover:bg-[color:var(--accent-alt)] shadow hover:shadow-[0_0_20px_var(--accent-alt)] hover:text-black transition"
-            >
-              Industries
-            </a>
-          </div>
+
         </div>
 
         {/* Divider */}

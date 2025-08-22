@@ -99,6 +99,18 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% { transform: translateX(-50%); }
+  50% { transform: translateX(50%); }
+  100% { transform: translateX(-50%); }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite ease-in-out;
+  background: linear-gradient(90deg, transparent, rgba(0,255,255,0.4), transparent);
+}
+
+
 .scanlines {
   background: repeating-linear-gradient(
     180deg,
