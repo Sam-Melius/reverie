@@ -48,13 +48,13 @@ export default function WhyChooseUs() {
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <a
               href="#services"
-              className="bg-[#1454ff] text-black font-bold py-3 px-6 rounded hover:bg-[#0c43d4] transition shadow-lg"
+              className="bg-[color:var(--accent-alt-dark)] text-black font-bold py-3 px-6 rounded shadow hover:shadow-[0_0_20px_var(--accent-alt)] hover:bg-[color:var(--accent-alt)] transition shadow-lg"
             >
               Services
             </a>
             <a
               href="#industries"
-              className="border border-[#1454ff] text-[#1454ff] font-bold py-3 px-6 rounded hover:bg-[#1454ff] hover:text-black transition"
+              className="border border-[color:var(--accent-alt)] text-[color:var(--accent-alt)] font-bold py-3 px-6 rounded hover:bg-[color:var(--accent-alt)] shadow hover:shadow-[0_0_20px_var(--accent-alt)] hover:text-black transition"
             >
               Industries
             </a>
