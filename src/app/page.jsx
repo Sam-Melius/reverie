@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <AngleDivider color="#0a0a0a" height={120} />       {/* next section bg */}
+      <AngleDivider color="dark-grey" height={120} />       {/* next section bg */}
       <PainPoints />
       <AngleDivider color="#000000" height={160} />       {/* next section bg */}
       <CoreServices />
-      <AngleDivider color="#0a0a0a" height={160} />       {/* next section bg */}
+      <AngleDivider color="#0056cc" height={160} />       {/* next section bg */}
       <Industries />
-      <AngleDivider color="#0a0a0a" height={160} />       {/* next section bg */}
+      <AngleDivider color="#0056cc" height={160} />       {/* next section bg */}
       <WhyChoose />
     </main>
   );

@@ -1,4 +1,4 @@
-export default function AngleDivider({ color = "#0a0a0a", height = 60, flip = false }) {
+export default function AngleDivider({ color = "#000000ff", height = 60, flip = false }) {
   // Renders an angled SVG wedge that "bleeds" into the next section color
   return (
     <div

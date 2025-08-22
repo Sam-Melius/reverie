@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ServerCog, ShieldCheck, Lightbulb } from "lucide-react";
+import { motion } from "framer-motion";
+import { lexend } from "../styles/fonts";
 
 
 export default function Header() {
@@ -12,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-[color:var(--accent)/10]">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${lexend.className}">
+      <div className={`max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${lexend.className}`}>
         <Link
           href="/"
           className="text-[color:var(--accent)] font-bold text-xl tracking-wide"
@@ -34,7 +36,7 @@ export default function Header() {
             </span>
 
             {open && (
-              <div
+              <motion.div
                 initial={{ opacity: 0, y: -10, scale: 0.96, rotateX: -15 }}
                 animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 transition={{ type: "spring", duration: 0.8, bounce: 0.5 }}
@@ -62,7 +64,7 @@ export default function Header() {
                   title="Innovate"
                   desc="Building tailored solutions to streamline operations and enhance user experiences."
                 />
-              </div>
+              </motion.div>
             )}
           </div>
 
