@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import BackgroundFX from "../components/BackgroundFX";
 import { lexend } from '../styles/fonts';
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Reverie Tech",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
       </body>
+      <Footer />
     </html>
   );
 }

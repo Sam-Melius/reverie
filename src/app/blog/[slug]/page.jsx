@@ -1,12 +1,12 @@
 import { client } from "../../../../sanity/lib/client";
-import { singlePostQuery } from "../../../../sanity/lib/queries";
+import { postBySlugQuery } from "../../../../sanity/lib/queries";
 import { PortableText } from "@portabletext/react";
 import { urlForImage } from "../../../../sanity/lib/image";
 import { lexend } from "../../../styles/fonts";
 
 
 export default async function BlogPost({ params }) {
-  const post = await client.fetch(singlePostQuery(params.slug));
+  const post = await client.fetch(postBySlugQuery, { slug: params.slug });
 
   if (!post) return <div className="text-white p-10">Post not found.</div>;
 
