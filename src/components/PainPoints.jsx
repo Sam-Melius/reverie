@@ -3,40 +3,52 @@
 import { useState } from "react";
 import { lexend } from "../styles/fonts";
 import { ShieldCheck, Cpu, AlertTriangle, Activity } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const painPoints = [
   {
-    icon: <ShieldCheck size={40} />,
+    icon: <ShieldCheck size={50} />,
     title: "Security Risks",
     description:
-      "Outdated systems leave your business vulnerable to cyberattacks and data breaches.",
-    bg: "/Manage.png",
+      "Outdated or poorly maintained systems pose a significant threat to modern organizations, exposing them to a wide range of cybersecurity vulnerabilities. Without current software patches, up-to-date security protocols, or centralized monitoring, businesses are easy targets for cybercriminals who exploit these weaknesses to gain unauthorized access. Data breaches, ransomware attacks, and system hijackings can lead to devastating financial losses, legal consequences, and permanent damage to a company’s reputation. In today’s evolving digital landscape, maintaining robust security isn’t optional—it’s a critical requirement for protecting sensitive information and ensuring long-term operational resilience.",
+    bg: "/SecurityRisk.png",
   },
   {
-    icon: <Cpu size={40} />,
+    icon: <Cpu size={50} />,
     title: "Tech Overload",
     description:
-      "Too many tools and no strategy? Disconnected platforms slow your team down.",
-    bg: "/Protect.png",
+      "In today’s fast-paced digital environment, organizations often adopt numerous tools and platforms without a cohesive strategy in place. While each solution may address a specific need, the lack of integration between systems leads to inefficiencies, duplicated efforts, and scattered data. As your team juggles between disjointed platforms, productivity plummets and communication breaks down. The result? A tech stack that feels more like a burden than a benefit. Without streamlined workflows and centralized control, your technology begins to work against you—creating confusion, delays, and unnecessary complexity.",
+    bg: "/TechOverload.png",
   },
   {
-    icon: <AlertTriangle size={40} />,
+    icon: <AlertTriangle size={50} />,
     title: "Reactive IT",
     description:
-      "Waiting until something breaks wastes time, money, and customer trust.",
-    bg: "/Innovate.png",
+      "Relying on a break-fix approach to technology is no longer sustainable in today’s always-on digital landscape. When IT systems are only addressed after failure occurs, businesses face costly downtime, lost revenue, and reputational damage. From unexpected server crashes to security breaches left unchecked, each incident puts your operations—and your clients’ trust—at risk. This reactive model drains resources, disrupts workflows, and creates a culture of crisis response rather than strategic growth. Proactive monitoring, maintenance, and planning are essential to prevent issues before they happen and ensure long-term stability and customer confidence.",
+    bg: "/Reactive.png",
   },
   {
-    icon: <Activity size={40} />,
+    icon: <Activity size={50} />,
     title: "Lack of Innovation",
     description:
-      "Falling behind competitors who leverage tech to streamline operations and improve UX.",
-    bg: "/PainPoint.png", // fallback
+      "In a rapidly evolving digital world, failing to innovate can quietly cripple a business. While competitors leverage emerging technologies to automate workflows, enhance customer experiences, and optimize decision-making, companies without a clear innovation strategy fall behind. Relying on outdated systems and manual processes leads to inefficiencies, missed opportunities, and stagnant growth. Innovation isn't just about flashy tech—it’s about adaptability, foresight, and building systems that evolve with your goals. Without it, even well-established businesses risk becoming irrelevant in the eyes of both customers and the market.",
+    bg: "/Lack.png", // fallback
   },
 ];
 
+
 export default function PainPointsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [prevIndex, setPrevIndex] = useState(null);
+  const [direction, setDirection] = useState(1); // 1 = right, -1 = left
+
+const handleHover = (index) => {
+  if (index !== hoveredIndex) {
+    setDirection(index > hoveredIndex ? 1 : -1);
+    setPrevIndex(hoveredIndex);
+    setHoveredIndex(index);
+  }
+};
 
   return (
     <section
@@ -44,13 +56,28 @@ export default function PainPointsSection() {
       className={`relative w-full min-h-[80vh] bg-[#0b0b0b] text-white overflow-hidden ${lexend.className}`}
     >
       {/* Background image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-500"
-        style={{
-          backgroundImage: `url(${hoveredIndex !== null ? painPoints[hoveredIndex].bg : "/PainPoint.png"})`,
-          opacity: 0.25,
-        }}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={hoveredIndex !== null ? painPoints[hoveredIndex].bg : "/PainPoint.png"}
+          initial={{ x: `${-100 * direction}%`, opacity: 0, filter: "blur(12px)" }}
+          animate={{ x: "0%", opacity: 1, filter: "blur(0px)" }}
+          exit={{ x: `${100 * direction}%`, opacity: 0, filter: "blur(12px)" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${hoveredIndex !== null ? painPoints[hoveredIndex].bg : "/PainPoint.png"})`,
+            opacity: 0.25,
+          }}
+        />
+        <motion.div
+        key={`overlay-${hoveredIndex}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="absolute inset-0 z-0 bg-gradient-to-br from-[color:var(--accent-alt)] via-transparent to-black"
       />
+      </AnimatePresence>
 
       {/* Gradient overlay for better text visibility */}
       <div className="absolute inset-0  z-0" />
@@ -67,7 +94,8 @@ export default function PainPointsSection() {
         {painPoints.map((point, index) => (
           <div
             key={index}
-            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseEnter={() => handleHover(index)}
+
             onMouseLeave={() => setHoveredIndex(null)}
             className="w-1/4 border-l border-r border-white/10 backdrop-blur-sm px-6 py-12 transition-all duration-300 hover:backdrop-blur-md group flex flex-col justify-center items-center text-center"
           >
@@ -77,9 +105,12 @@ export default function PainPointsSection() {
             <h3 className="text-xl font-semibold text-white mb-2">
               {point.title}
             </h3>
-            <p className="text-white/70 text-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-              {point.description}
-            </p>
+<div className="relative h-20 w-full">
+  <p className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white/70 text-sm translate-y-2 group-hover:translate-y-0 pointer-events-none text-center px-2">
+    {point.description}
+  </p>
+</div>
+
           </div>
         ))}
       </div>

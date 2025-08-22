@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <AngleDivider color="dark-grey" height={120} />       {/* next section bg */}
+      <AngleDivider color="dark-grey" height={160} />       {/* next section bg */}
       <PainPoints />
       <AngleDivider color="#000000" height={160} />       {/* next section bg */}
       <CoreServices />
