@@ -16,12 +16,18 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-[color:var(--accent)/10]">
       <div className={`max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${lexend.className}`}>
-        <Link
-          href="/"
-          className="text-[color:var(--accent)] font-bold text-xl tracking-wide"
-        >
-          Reverie<span className="text-white">Tech</span>
-        </Link>
+<Link href="/" className="flex items-center w-auto">
+  <img
+    src="/ReverieLogo.png"
+    alt="Reverie Tech Logo"
+    className="w-[100px] h-auto object-contain"
+  />
+  <span className="text-[color:var(--accent)] font-bold text-lg tracking-wide">
+    Reverie Tech<span className="text-white"> Solutions</span>
+  </span>
+</Link>
+
+
 
         <nav className="flex gap-6 text-sm font-semibold">
           <Link href="/" className={navLink(pathname, "/")}>Home</Link>
