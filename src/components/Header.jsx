@@ -4,54 +4,57 @@ import Tilt from "react-parallax-tilt";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { ServerCog, ShieldCheck, Lightbulb } from "lucide-react";
-import { motion } from "framer-motion";
+import { ServerCog, ShieldCheck, Lightbulb, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { lexend } from "../styles/fonts";
-
 
 export default function Header() {
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-[color:var(--accent)/10]">
-      <div className={`max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${lexend.className}`}>
-<Link href="/" className="flex items-center w-auto">
-  <img
-    src="/ReverieLogo.png"
-    alt="Reverie Tech Logo"
-    className="w-[100px] h-auto object-contain"
-  />
-  <span className="text-[color:var(--accent)] font-bold text-lg tracking-wide">
-    Reverie Tech<span className="text-white"> Solutions</span>
-  </span>
-</Link>
+      <div
+        className={`max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${lexend.className}`}
+      >
+        {/* Logo + Name */}
+        <Link href="/" className="flex items-center w-auto">
+          <img
+            src="/ReverieLogo.png"
+            alt="Reverie Tech Logo"
+            className="w-[100px] h-auto object-contain"
+          />
+          <span className="ml-3 text-[color:var(--accent)] font-bold text-lg tracking-wide">
+            Reverie Tech<span className="text-white"> Solutions</span>
+          </span>
+        </Link>
 
-
-
-        <nav className="flex gap-6 text-sm font-semibold">
-          <Link href="/" className={navLink(pathname, "/")}>Home</Link>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-6 text-sm font-semibold">
+          <Link href="/" className={navLink(pathname, "/")}>
+            Home
+          </Link>
 
           {/* SERVICES DROPDOWN */}
           <div
-            onMouseEnter={() => setOpen(true)}
+            onMouseEnter={() => setOpen("services")}
             onMouseLeave={() => setOpen(false)}
-            className="group"
+            className="group relative"
           >
             <span className="text-white/90 hover:text-[color:var(--accent)] cursor-pointer">
               Services
             </span>
-
-            {open && (
+            {open === "services" && (
               <motion.div
                 initial={{ opacity: 0, scaleY: 0.7 }}
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-[0px] right-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-[0_0_40px_rgba(0,255,255,0.08)] rounded-bl-xl px-8 py-6 w-[92vw] max-w-6xl z-50 backdrop-blur-xl overflow-hidden origin-top"
+                className="fixed top-[0px] right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l boreder-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
-                  className="text-[color:var(--accent)] text-xl font-bold text-center mb-6 relative"
+                  className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
@@ -64,7 +67,7 @@ export default function Header() {
                   />
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-6">
                   <DropdownItem
                     href="/services/manage"
                     icon={<ServerCog className="w-6 h-6" />}
@@ -86,29 +89,27 @@ export default function Header() {
                 </div>
               </motion.div>
             )}
-
           </div>
 
           {/* INDUSTRIES DROPDOWN */}
           <div
             onMouseEnter={() => setOpen("industries")}
             onMouseLeave={() => setOpen(false)}
-            className="group"
+            className="group relative"
           >
             <span className="text-white/90 hover:text-[color:var(--accent)] cursor-pointer">
               Industries
             </span>
-
             {open === "industries" && (
               <motion.div
                 initial={{ opacity: 0, scaleY: 0.7 }}
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-[0px] right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-[0_0_40px_rgba(0,255,255,0.08)] rounded-bl-xl px-8 py-6 w-[92vw] max-w-6xl z-50 backdrop-blur-xl overflow-hidden origin-top"
+                className="fixed top-[0px] right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
-                  className="text-[color:var(--accent)] text-xl font-bold text-center mb-6 relative"
+                  className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
@@ -121,7 +122,7 @@ export default function Header() {
                   />
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-6">
                   <DropdownItem
                     href="/industries/businesses"
                     title="Businesses"
@@ -152,16 +153,93 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/contact" className={navLink(pathname, "/contact")}>Contact</Link>
-          <Link href="/blog" className={navLink(pathname, "/blog")}>Blog</Link>
-
+          <Link href="/contact" className={navLink(pathname, "/contact")}>
+            Contact
+          </Link>
+          <Link href="/blog" className={navLink(pathname, "/blog")}>
+            Blog
+          </Link>
         </nav>
+
+        {/* Mobile Hamburger */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="text-white hover:text-[color:var(--accent)] transition"
+          >
+            ☰
+          </button>
+        </div>
       </div>
-      
+
+      {/* MOBILE FULL-SCREEN MENU */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* BACKDROP */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.95 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className=" inset-0 bg-black backdrop-blur-md z-10"
+              onClick={() => setMobileOpen(false)}
+            />
+
+            {/* MENU */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 200, damping: 25 }}
+              className="top-0 right-0 w-full h-full bg-black/95 text-white z-50 p-8 flex flex-col"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="absolute top-6 right-6 text-gray-400 hover:text-white transition"
+              >
+                <X className="w-7 h-7" />
+              </button>
+
+              {/* Navigation */}
+              <nav className="flex flex-col gap-8 mt-12 text-xl font-semibold">
+                <Link href="/" onClick={() => setMobileOpen(false)}>
+                  Home
+                </Link>
+
+                <div>
+                  <h3 className="text-[color:var(--accent)] mb-2">Services</h3>
+                  <div className="flex flex-col gap-3 ml-4">
+                    <Link href="/services/manage" onClick={() => setMobileOpen(false)}>Manage</Link>
+                    <Link href="/services/protect" onClick={() => setMobileOpen(false)}>Protect</Link>
+                    <Link href="/services/innovate" onClick={() => setMobileOpen(false)}>Innovate</Link>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-[color:var(--accent)] mb-2">Industries</h3>
+                  <div className="flex flex-col gap-3 ml-4">
+                    <Link href="/industries/businesses" onClick={() => setMobileOpen(false)}>Businesses</Link>
+                    <Link href="/industries/healthcare" onClick={() => setMobileOpen(false)}>Healthcare</Link>
+                    <Link href="/industries/entertainment" onClick={() => setMobileOpen(false)}>Entertainment</Link>
+                    <Link href="/industries/legal" onClick={() => setMobileOpen(false)}>Legal</Link>
+                    <Link href="/industries/bowling" onClick={() => setMobileOpen(false)}>Bowling</Link>
+                  </div>
+                </div>
+
+                <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+                <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
 
+/* Dropdown Card */
 function DropdownItem({ href, icon, title, desc }) {
   return (
     <Tilt
@@ -176,7 +254,7 @@ function DropdownItem({ href, icon, title, desc }) {
     >
       <Link
         href={href}
-        className="group p-4 rounded-lg transition border border-transparent hover:bg-[color:var(--accent)/10]  shadow hover:shadow-[0_0_15px_color:var(--accent-alt)] bg-[#0d0d0d]/70 backdrop-blur-sm"
+        className="group p-4 rounded-lg transition border border-transparent hover:bg-[color:var(--accent)/10] shadow hover:shadow-[0_0_15px_color:var(--accent-alt)] bg-[#0d0d0d]/70 backdrop-blur-sm"
       >
         <div className="flex items-center gap-3 mb-2 text-[color:var(--accent)] group-hover:scale-105 transition-transform">
           {icon}

@@ -15,8 +15,13 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
         {/* Logo + Tagline */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-[color:var(--accent)] tracking-wide">Reverie Tech <span className="text-white"> Solutions</span></h3>
-          <p className="text-white/70">
+              <img
+    src="/WhiteLogo.png"
+    alt="Reverie Tech Logo"
+    className="w-[200px] h-auto object-contain"
+  />
+          {/* <h3 className="text-2xl font-bold text-[color:var(--accent)] tracking-wide">Reverie Tech <span className="text-white"> Solutions</span></h3> */}
+          <p className="text-[color:var(--accent)]">
             Future-ready IT solutions that keep your business secure, efficient, and innovative.
           </p>
         </div>
