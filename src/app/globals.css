@@ -9,13 +9,17 @@
   --foreground: #171717;
 
   /* Accent Colors */
-  --accent: #007BFF; /* Reverie Blue */
+  --accent: #0052DC; /* Reverie Blue */
   --accent-light: #339CFF;
-  --accent-dark: #0056cc;
+  --accent-dark: #01215A;
 
-  --accent-alt: #00e3e3; /* Techy Turquoise */
+  --accent-alt: #FC814A; /* Techy Turquoise */
   --accent-alt-light: #4ef0e0;
   --accent-alt-dark: #00b3b3;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -52,12 +56,12 @@ body {
 }
 .glitch::before {
   animation: glitchTop 1.5s infinite linear alternate-reverse;
-  color: #00e3e3;
+  color: #339CFF;
   top: -1px;
 }
 .glitch::after {
   animation: glitchBottom 1.5s infinite linear alternate-reverse;
-  color: #00e3e3;
+  color: #0052DC;
   top: 1px;
 }
 @keyframes glitchTop {
