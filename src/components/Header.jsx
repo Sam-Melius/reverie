@@ -21,13 +21,13 @@ export default function Header() {
         {/* Logo + Name */}
         <Link href="/" className="flex items-center w-auto">
           <img
-            src="/ReverieLogo.png"
+            src="/LogoWhiteText.png"
             alt="Reverie Tech Logo"
-            className="w-[100px] h-auto object-contain"
+            className="w-[150px] h-auto object-contain"
           />
-          <span className="ml-3 text-[color:var(--accent)] font-bold text-lg tracking-wide">
+          {/* <span className="ml-3 text-[color:var(--accent)] font-bold text-lg tracking-wide">
             Reverie Tech<span className="text-white"> Solutions</span>
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Navigation */}
@@ -260,7 +260,7 @@ function DropdownItem({ href, icon, title, desc }) {
           {icon}
           <h3 className="text-lg font-semibold">{title}</h3>
         </div>
-        <p className="text-sm text-white/80 group-hover:text-[color:var(--accent-alt-light)]">
+        <p className="text-sm text-white/80 group-hover:text-[color:var(--accent-alt)]">
           {desc}
         </p>
       </Link>
