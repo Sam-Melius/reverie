@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { lexend } from "../styles/fonts";
+import { roboto } from "../styles/fonts";
 import { ShieldCheck, Cpu, AlertTriangle, Activity } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,28 +10,28 @@ const painPoints = [
     icon: <ShieldCheck size={50} />,
     title: "Security Risks",
     description:
-      "Outdated or poorly maintained systems pose a significant threat to modern organizations, exposing them to a wide range of cybersecurity vulnerabilities. Without current software patches, up-to-date security protocols, or centralized monitoring, businesses are easy targets for cybercriminals who exploit these weaknesses to gain unauthorized access. Data breaches, ransomware attacks, and system hijackings can lead to devastating financial losses, legal consequences, and permanent damage to a company’s reputation. In today’s evolving digital landscape, maintaining robust security isn’t optional—it’s a critical requirement for protecting sensitive information and ensuring long-term operational resilience.",
+      "Outdated or poorly maintained systems pose a significant threat to modern organizations, exposing them to a wide range of cybersecurity vulnerabilities. Data breaches, ransomware attacks, and system hijackings can lead to devastating financial losses, legal consequences, and permanent damage to a company’s reputation.",
     bg: "/SecurityRisk.png",
   },
   {
     icon: <Cpu size={50} />,
     title: "Tech Overload",
     description:
-      "In today’s fast-paced digital environment, organizations often adopt numerous tools and platforms without a cohesive strategy in place. While each solution may address a specific need, the lack of integration between systems leads to inefficiencies, duplicated efforts, and scattered data. As your team juggles between disjointed platforms, productivity plummets and communication breaks down. The result? A tech stack that feels more like a burden than a benefit. Without streamlined workflows and centralized control, your technology begins to work against you—creating confusion, delays, and unnecessary complexity.",
+      "In today’s fast-paced digital environment, organizations often adopt numerous tools and platforms without a cohesive strategy in place. Without streamlined workflows and centralized control, your technology begins to work against you—creating confusion, delays, and unnecessary complexity.",
     bg: "/TechOverload.png",
   },
   {
     icon: <AlertTriangle size={50} />,
     title: "Reactive IT",
     description:
-      "Relying on a break-fix approach to technology is no longer sustainable in today’s always-on digital landscape. When IT systems are only addressed after failure occurs, businesses face costly downtime, lost revenue, and reputational damage. From unexpected server crashes to security breaches left unchecked, each incident puts your operations—and your clients’ trust—at risk. This reactive model drains resources, disrupts workflows, and creates a culture of crisis response rather than strategic growth. Proactive monitoring, maintenance, and planning are essential to prevent issues before they happen and ensure long-term stability and customer confidence.",
+      "Relying on a break-fix approach to technology is no longer sustainable in today’s always-on digital landscape. This reactive model drains resources, disrupts workflows, and creates a culture of crisis response rather than strategic growth. Proactive monitoring, maintenance, and planning are essential to prevent issues before they happen and ensure long-term stability and customer confidence.",
     bg: "/Reactive.png",
   },
   {
     icon: <Activity size={50} />,
     title: "Lack of Innovation",
     description:
-      "In a rapidly evolving digital world, failing to innovate can quietly cripple a business. While competitors leverage emerging technologies to automate workflows, enhance customer experiences, and optimize decision-making, companies without a clear innovation strategy fall behind. Relying on outdated systems and manual processes leads to inefficiencies, missed opportunities, and stagnant growth. Innovation isn't just about flashy tech—it’s about adaptability, foresight, and building systems that evolve with your goals. Without it, even well-established businesses risk becoming irrelevant in the eyes of both customers and the market.",
+      "In a rapidly evolving digital world, failing to innovate can quietly cripple a business. While competitors leverage emerging technologies to automate workflows, enhance customer experiences, and optimize decision-making, companies without a clear innovation strategy fall behind. Relying on outdated systems and manual processes leads to inefficiencies, missed opportunities, and stagnant growth.",
     bg: "/Lack.png", // fallback
   },
 ];
@@ -53,7 +53,7 @@ const handleHover = (index) => {
   return (
     <section
       id="pain"
-      className={`relative w-full min-h-[80vh] bg-[#0b0b0b] text-white overflow-hidden ${lexend.className}`}
+      className={`relative w-full min-h-[80vh] bg-[ #96939B] text-white overflow-hidden ${roboto.className}`}
     >
       {/* Background image */}
       <AnimatePresence mode="wait">
@@ -84,7 +84,7 @@ const handleHover = (index) => {
 
       {/* Title */}
       <div className="relative z-10 text-center mb-12 pt-20">
-        <h2 className="text-3xl md:text-5xl font-bold text-[rgb(0,82,220)]">
+        <h2 className="text-3xl md:text-5xl font-bold text-[color:var(--accent)]">
           Common Tech Pain Points
         </h2>
       </div>
@@ -99,7 +99,7 @@ const handleHover = (index) => {
             onMouseLeave={() => setHoveredIndex(null)}
             className="w-1/4 border-l border-r border-white/10 backdrop-blur-sm px-6 py-12 transition-all duration-300 hover:backdrop-blur-md group flex flex-col justify-center items-center text-center"
           >
-            <div className="mb-4 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+            <div className="mb-4 text-[color:var(--accent-alt)] group-hover:scale-110 transition-transform duration-300">
               {point.icon}
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">

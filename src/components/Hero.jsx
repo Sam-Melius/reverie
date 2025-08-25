@@ -29,7 +29,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -40, rotateZ: -1 }}
             animate={{ opacity: 1, x: 0, rotateZ: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-yellow-300 to-white drop-shadow-[0_0_10px_var(--accent-alt)]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
           >
             Innovative. Reliable.{" "}
             <span className="text-[color:var(--accent-alt)]">Secure.</span>
@@ -52,7 +52,7 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="bg-[color:var(--accent-alt-light)] hover:bg-[color:var(--accent-alt)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
+              className="bg-[color:var(--accent)] hover:bg-[color:var(--accent-alt)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
             >
               Get in Touch
             </Link>

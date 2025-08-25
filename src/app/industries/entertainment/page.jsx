@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { lexend } from "../../../styles/fonts";
+import { roboto} from "../../../styles/fonts";
 import Link from "next/link";
 
 export default function EntertainmentPage() {
   return (
-    <main className={`min-h-screen text-white px-6 py-20 md:px-12 ${lexend.className}`}>
+    <main className={`min-h-screen text-white px-6 py-20 md:px-12 ${roboto.className}`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
