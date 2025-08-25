@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function BusinessIndustryPage() {
   return (
-    <main className={`${roboto.className} text-white min-h-svh px-6 py-20`}>
+    <main className={` text-white min-h-svh px-6 py-20`}>
       {/* Hero */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
