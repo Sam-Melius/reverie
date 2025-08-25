@@ -3,7 +3,7 @@
 import { client } from "../../../sanity/lib/client";
 import { allPostsQuery } from "../../../sanity/lib/queries";
 import Link from "next/link";
-import { lexend } from "../../styles/fonts";
+import { roboto } from "../../styles/fonts";
 
 export const metadata = {
   title: "Reverie Blog",
@@ -15,7 +15,7 @@ export default async function BlogPage() {
 
   return (
     <section
-      className={`min-h-screen py-24 px-6 bg-[#0a0a0a] text-white relative overflow-hidden ${lexend.className}`}
+      className={`min-h-screen py-24 px-6 bg-[#0a0a0a] text-white relative overflow-hidden ${roboto.className}`}
     >
       {/* Grid Background */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />

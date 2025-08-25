@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lexend } from "next/font/google";
+import { roboto } from "next/font/google";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const lexend = Lexend({ subsets: ["latin"] });
+
 
 export default function BusinessIndustryPage() {
   return (
-    <main className={`${lexend.className} text-white min-h-svh px-6 py-20`}>
+    <main className={`${roboto.className} text-white min-h-svh px-6 py-20`}>
       {/* Hero */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
