@@ -19,10 +19,10 @@ export default function ContactForm() {
     >
       {/* ✨ Background */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] [background-size:30px_30px] opacity-30 pointer-events-none z-0" />
-      <div className="absolute -top-40 left-0 w-[600px] h-[600px] bg-yellow-400/10 blur-[180px] rounded-full z-0" />
+      <div className="absolute -top-40 left-0 w-[600px] h-[600px] bg-[color:var(--accent)] blur-[180px] rounded-full z-0" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-[color:var(--accent-alt)] mb-4">
           Request a Free MSP Quote
         </h2>
         <p className="text-white/80">
@@ -50,13 +50,13 @@ export default function ContactForm() {
 
           {/* Company Size */}
           <div>
-            <label className="block text-sm mb-2 text-yellow-400 font-semibold">
+            <label className="block text-sm mb-2 text-[color:var(--accent-alt)] font-semibold">
               Company Size
             </label>
             <select
               name="size"
               required
-              className="w-full bg-[#111] border border-yellow-400 px-4 py-3 rounded text-white focus:outline-none"
+              className="w-full bg-[#111] border border-[color:var(--accent-alt)] px-4 py-3 rounded text-white focus:outline-none"
             >
               <option value="">Select company size</option>
               <option>1-10 employees</option>
@@ -69,7 +69,7 @@ export default function ContactForm() {
 
           {/* Services of Interest */}
           <div>
-            <label className="block text-sm mb-2 text-yellow-400 font-semibold">
+            <label className="block text-sm mb-2 text-[color:var(--accent-alt)] font-semibold">
               Services of Interest
             </label>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -79,7 +79,7 @@ export default function ContactForm() {
                     type="checkbox"
                     name="services"
                     value={service}
-                    className="form-checkbox text-yellow-400 bg-[#111] border-yellow-400"
+                    className="form-checkbox text-[color:var(--accent-alt)] bg-[#111] border-[color:var(--accent-alt)]"
                   />
                   <span className="text-white/90">{service}</span>
                 </label>
@@ -89,14 +89,14 @@ export default function ContactForm() {
 
           {/* Additional Comments */}
           <div>
-            <label className="block text-sm mb-2 text-yellow-400 font-semibold">
+            <label className="block text-sm mb-2 text-[color:var(--accent-alt)] font-semibold">
               Additional Comments
             </label>
             <textarea
               name="comments"
               rows="4"
               placeholder="Tell us more about your needs"
-              className="w-full bg-[#111] border border-yellow-400 px-4 py-3 rounded text-white resize-none focus:outline-none"
+              className="w-full bg-[#111] border border-[color:var(--accent-alt)] px-4 py-3 rounded text-white resize-none focus:outline-none"
             />
           </div>
 
@@ -104,7 +104,7 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-yellow-400 text-black font-bold py-3 px-8 rounded hover:bg-yellow-300 transition shadow-lg"
+              className="bg-[color:var(--accent-alt)] text-black font-bold py-3 px-8 rounded hover:bg-[color:var(--accent)] hover:drop-shadow-[0_0_10px_var(--accent-light)] hover:text-[color:var(--accent-alt)] transition shadow-xl"
             >
               Submit Request
             </button>
@@ -115,7 +115,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="relative z-10 text-center text-xl text-yellow-400 font-semibold"
+          className="relative z-10 text-center text-xl text-[color:var(--accent-alt)] font-semibold"
         >
           ✅ Thank you for your submission! We'll contact you soon with your free quote.
         </motion.div>
@@ -128,14 +128,14 @@ export default function ContactForm() {
 function Input({ label, name, type = "text", required = false }) {
   return (
     <div className="flex flex-col">
-      <label className="text-sm mb-2 text-yellow-400 font-semibold">
+      <label className="text-sm mb-2 text-[color:var(--accent-alt)] font-semibold">
         {label}
       </label>
       <input
         type={type}
         name={name}
         required={required}
-        className="bg-[#111] border border-yellow-400 px-4 py-3 rounded text-white focus:outline-none"
+        className="bg-[#111] border border-[color:var(--accent-alt)] px-4 py-3 rounded text-white focus:outline-none"
       />
     </div>
   );

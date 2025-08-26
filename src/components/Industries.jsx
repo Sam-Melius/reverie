@@ -62,33 +62,32 @@ export default function Industries() {
       </div>
 
       {/* Cards */}
-<div className="flex flex-wrap justify-center gap-10 max-w-6xl mx-auto relative z-10">
-  {industries.map((item, i) => (
-    <Link
-      key={i}
-      href={item.href}
-      className="relative bg-[#111] rounded-xl p-6 shadow-md ring-2 ring-[color:var(--accent-alt)] hover:ring-[color:var(--accent)] ring-offset-2 ring-offset-[#0a0a0a] transition-all duration-300 hover:scale-[1.03] group overflow-hidden w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px]"
-    >
-      {/* Ripple glow on hover */}
-      <div className="absolute inset-0 z-0 transition-all duration-500 group-hover:scale-105 group-hover:bg-[color:var(--accent-alt)] bg-[color:var(--accent)] blur-[40px] pointer-events-none" />
-      <div className="relative z-10">
-        <div className="flex items-center gap-3 mb-3">
-          {item.icon}
-          <h3
-            className="text-xl font-bold"
-            style={{ textShadow: "0 0 6px rgba(255,255,255,0.3)" }}
+      <div className="flex flex-wrap justify-center gap-10 max-w-6xl mx-auto relative z-10">
+        {industries.map((item, i) => (
+          <Link
+            key={i}
+            href={item.href}
+            className="relative bg-[#111] rounded-xl p-6 shadow-md ring-2 ring-[color:var(--accent-alt)] hover:ring-[color:var(--accent)] ring-offset-2 ring-offset-[#0a0a0a] transition-all duration-300 hover:scale-[1.03] group overflow-hidden w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-20px)] max-w-[400px]"
           >
-            {item.title}
-          </h3>
-        </div>
-        <p className="text-[color:var(--accent-alt)] group-hover:text-[color:var(--accent)] text-sm">
-          {item.text}
-        </p>
+            {/* Ripple glow on hover */}
+            <div className="absolute inset-0 z-0 transition-all duration-500 group-hover:scale-105 group-hover:bg-[color:var(--accent-alt)] bg-[color:var(--accent)] blur-[40px] pointer-events-none" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-3">
+                {item.icon}
+                <h3
+                  className="text-xl font-bold"
+                  style={{ textShadow: "0 0 6px rgba(255,255,255,0.3)" }}
+                >
+                  {item.title}
+                </h3>
+              </div>
+              <p className="text-[color:var(--accent-alt)] group-hover:text-[color:var(--accent)] text-sm">
+                {item.text}
+              </p>
+            </div>
+          </Link>
+        ))}
       </div>
-    </Link>
-  ))}
-</div>
-
 
     </section>
   );
