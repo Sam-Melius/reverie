@@ -5,6 +5,7 @@ import { allPostsQuery } from "../../../sanity/lib/queries";
 import Link from "next/link";
 import { roboto } from "../../styles/fonts";
 
+
 export const metadata = {
   title: "Reverie Blog",
   description: "Insights from the minds at Reverie Tech Solutions",
@@ -19,11 +20,11 @@ export default async function BlogPage() {
     >
       {/* Grid Background */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
-      <div className="absolute -top-60 -left-60 w-[700px] h-[700px] bg-gradient-to-br from-[#0052DC]/20 to-[#00F0FF]/10 rounded-full blur-[160px] z-0" />
+      <div className="absolute -top-60 -left-60 w-[700px] h-[700px] bg-gradient-to-br from-[color:var(--accent-light)] to-[#00F0FF]/10 rounded-full blur-[160px] z-0" />
 
       {/* Header */}
       <div className="relative z-10 text-center max-w-2xl mx-auto mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#00F0FF]" style={{ textShadow: "0 0 20px #00F0FF44" }}>
+        <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--accent)]" style={{ textShadow: "0 0 20px var(--accent-alt)" }}>
           Reverie Tech Blog
         </h1>
         <p className="mt-4 text-gray-400">
@@ -37,9 +38,9 @@ export default async function BlogPage() {
           <Link
             key={post._id}
             href={`/blog/${post.slug.current}`}
-            className="group bg-[#111] border border-[#0052DC] rounded-xl p-6 hover:shadow-[0_0_20px_#00F0FF55] hover:border-[#00F0FF] transition duration-300"
+            className="group bg-[#111] border border-[color:var(--accent-alt)] rounded-xl p-6 hover:shadow-[0_0_20px_var(--accent-alt)] hover:border-[color:var(--accent)] transition duration-300"
           >
-            <h3 className="text-xl font-bold mb-2 text-[#00F0FF] group-hover:underline">
+            <h3 className="text-xl font-bold mb-2 text-[color:var(--accent-light)] group-hover:underline">
               {post.title}
             </h3>
             <p className="text-white/70 text-sm mb-2">
