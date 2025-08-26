@@ -36,8 +36,9 @@ export default function CoreServices() {
       {/* ✨ Techy Background Effects */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-5" />
-        <div className="absolute top-[10%] left-[-10%] w-[400px] h-[400px] bg-blue-500/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-[5%] right-[5%] w-[500px] h-[500px] bg-yellow-500/20 blur-2xl rounded-full" />
+        <div className="absolute top-[10%] right-[-0%] w-[400px] h-[400px] bg-[color:var(--accent)] blur-3xl rounded-full" />
+        <div className="absolute bottom-[30%] left-[0%] w-[400px] h-[400px] bg-[color:var(--accent-alt)] blur-2xl rounded-full" />
+        <div className="absolute bottom-[0%] right-[0%] w-[400px] h-[400px] bg-[color:var(--accent)] blur-2xl rounded-full" />
         <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] -translate-x-1/2 -translate-y-1/2 bg-gradient-radial from-blue-900 via-transparent to-transparent opacity-20 rounded-full blur-[150px]" />
       </div>
 
