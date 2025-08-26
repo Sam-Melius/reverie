@@ -17,9 +17,14 @@ export default function BusinessIndustryPage() {
         transition={{ duration: 0.6 }}
         className="max-w-5xl mx-auto text-center"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-[color:var(--accent)]">
+        <motion.h1
+            initial={{ opacity: 0, x: -40, rotateZ: -1 }}
+            animate={{ opacity: 1, x: 0, rotateZ: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
+          >
           Innovative Tech Solutions for Businesses
-        </h1>
+        </motion.h1>
         <motion.div
           className="mx-auto mt-2 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
           animate={{ x: [-10, 10, -10] }}
@@ -30,7 +35,7 @@ export default function BusinessIndustryPage() {
         </p>
         <Link
           href="/contact"
-          className="bg-[color:var(--accent-alt-light)] hover:bg-[color:var(--accent-alt)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
+          className="bg-[color:var(--accent)] hover:bg-[color:var(--accent-alt)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
         >
           Get a Free Quote
         </Link>
@@ -38,7 +43,7 @@ export default function BusinessIndustryPage() {
 
       {/* Divider */}
       <motion.div
-        className="my-16 h-px bg-gradient-to-r from-transparent via-[color:var(--accent)] to-transparent w-full"
+        className="my-16 h-px bg-gradient-to-r from-transparent via-[color:var(--accent-alt)] to-transparent w-full"
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
         transition={{ duration: 1 }}
@@ -61,9 +66,9 @@ export default function BusinessIndustryPage() {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 0.6 }}
-  className="max-w-6xl mx-auto mt-24 px-6 py-16 md:px-12 bg-gradient-to-br from-[#0e0e0e] to-[#141414] border border-[color:var(--accent)] rounded-xl shadow-[0_0_60px_rgba(0,255,255,0.03)] backdrop-blur"
+  className="max-w-6xl mx-auto mt-24 px-6 py-16 md:px-12 bg-gradient-to-br from-[#0e0e0e] to-[#141414] border border-[color:var(--accent-alt)] rounded-xl shadow-[0_0_60px_rgba(0,255,255,0.03)] backdrop-blur"
 >
-  <h2 className="text-3xl md:text-4xl font-bold text-center text-[color:var(--accent)] mb-8">
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-[color:var(--accent-light)] mb-8">
     Comprehensive IT Services for Businesses
   </h2>
 
@@ -145,7 +150,7 @@ export default function BusinessIndustryPage() {
       At Reverie Tech Solutions, we believe that technology should drive your business forward—
       not slow it down. Our experts deliver scalable, secure, and innovative IT tailored to your mission.
     </p>
-    <button className="px-6 py-3 rounded bg-[color:var(--accent)] text-black font-semibold shadow hover:shadow-lg transition">
+    <button className="px-6 py-3 rounded bg-[color:var(--accent)] text-black font-semibold shadow hover:shadow-lg transition shadow-md hover:drop-shadow-[0_0_20px_var(--accent-alt)] hover:bg-[color:var(--accent-alt)]">
       Get a Free Quote
     </button>
   </motion.div>
@@ -162,7 +167,7 @@ function FeatureCard({ title, desc }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="bg-[#121212] border border-[color:var(--accent)] rounded-xl p-6 shadow-[0_0_30px_rgba(0,255,255,0.05)] relative overflow-hidden group"
+      className="bg-[#121212] border border-[color:var(--accent-alt)] rounded-xl p-6 shadow-[0_0_30px_rgba(0,255,255,0.05)] relative overflow-hidden group"
     >
       <div className="absolute top-0 left-0 w-full h-full bg-[color:var(--accent)] opacity-5 blur-[120px] -z-10" />
       <h3 className="text-xl text-[color:var(--accent)] font-semibold mb-3 group-hover:scale-105 transition-transform duration-300">
