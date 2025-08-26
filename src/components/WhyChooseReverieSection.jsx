@@ -69,7 +69,7 @@ export default function WhyReverieAltLayout() {
             }`}
           >
             <div className="bg-[#111111] border border-[color:var(--accent-alt)/30] shadow-[0_0_20px_var(--accent-alt)/10] p-8 rounded-3xl w-full md:w-[60%] transform hover:scale-[1.02] transition duration-300">
-              <div className="flex items-center gap-3 text-[color:var(--accent-alt)] mb-4">
+              <div className="flex items-center gap-3 text-[color:var(--accent)] mb-4">
                 {item.icon}
                 <h3 className="text-2xl font-bold text-white">
                   {item.title}

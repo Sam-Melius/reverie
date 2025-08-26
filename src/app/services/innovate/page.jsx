@@ -80,7 +80,7 @@ export default function InnovatePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-center text-[color:var(--accent)] mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-[color:var(--accent-light)] mb-12"
         >
           Transform Your Business with Innovation
         </motion.h2>
@@ -92,7 +92,7 @@ export default function InnovatePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-[#111827] border border-[rgba(0,255,255,0.15)] rounded-2xl p-6 shadow-md hover:shadow-[0_0_20px_rgba(0,255,255,0.1)] transition duration-300"
+              className="bg-[#111827] border border-[var(--accent-alt)] rounded-2xl p-6 shadow-md hover:shadow-[0_0_20px_var(--accent-light)] transition duration-300"
             >
               <div className="text-[color:var(--accent)] mb-4">
                 {service.icon}
