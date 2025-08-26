@@ -43,9 +43,14 @@ export default function ManagePage() {
         transition={{ duration: 0.8 }}
         className="text-center max-w-5xl mx-auto z-10"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-[color:var(--accent)]">
+          <motion.h1
+            initial={{ opacity: 0, x: -40, rotateZ: -1 }}
+            animate={{ opacity: 1, x: 0, rotateZ: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
+          >
           Manage
-        </h1>
+        </motion.h1>
         <p className="text-xl md:text-2xl text-white mb-8">
           Cutting-Edge Technology Solutions for Business Growth
         </p>
@@ -77,9 +82,9 @@ export default function ManagePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-[#111827] rounded-2xl p-6 text-center shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.15)] border border-white/10 backdrop-blur-sm group"
+            className="bg-[#111827] rounded-2xl p-6 text-center shadow-lg hover:shadow-[0_0_20px_var(--accent)] border border-white/10 backdrop-blur-sm group"
           >
-            <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform">
+            <div className="text-[color:var(--accent-alt)] mb-4 group-hover:scale-110 transition-transform">
               {service.icon}
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">

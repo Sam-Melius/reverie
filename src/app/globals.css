@@ -111,7 +111,7 @@ body {
 
 .shimmer {
   animation: shimmer 2s infinite ease-in-out;
-  background: linear-gradient(90deg, transparent, rgba(0,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
 }
 
 

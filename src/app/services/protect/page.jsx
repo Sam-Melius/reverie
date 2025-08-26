@@ -40,7 +40,7 @@ export default function ProtectPage() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
+          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
         >
           Protect
         </motion.h1>
@@ -79,7 +79,7 @@ export default function ProtectPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-center text-[color:var(--accent)] mb-16"
+          className="text-3xl md:text-5xl font-bold text-center text-[color:var(--accent-light)] mb-16"
         >
           Secure Your Business with Proven Protection
         </motion.h2>
@@ -92,9 +92,9 @@ export default function ProtectPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-[#111827] border border-[rgba(0,255,255,0.2)] rounded-2xl p-8 shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.2)] hover:scale-[1.02] transition-all duration-300"
+              className="bg-[#111827] border border-[var(--accent-alt)] rounded-2xl p-8 shadow-lg hover:shadow-[0_0_20px_var(--accent-light)] hover:scale-[1.02] transition-all duration-300"
             >
-              <div className="mb-4 text-cyan-400 flex justify-center">{service.icon}</div>
+              <div className="mb-4 text-[color:var(--accent)] flex justify-center">{service.icon}</div>
               <h3 className="text-2xl font-bold text-white mb-3 text-center">
                 {service.title}
               </h3>
