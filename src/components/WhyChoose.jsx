@@ -1,6 +1,6 @@
 "use client";
 
-
+import { motion } from "framer-motion"
 import { ShieldCheck, Lightbulb, Users } from "lucide-react";
 
 const features = [
@@ -36,12 +36,15 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2
-            className="text-3xl md:text-4xl font-bold text-[#1454ff] mb-6"
-            style={{ textShadow: "0 0 10px rgba(20, 84, 255, 0.6)" }}
+          <motion.h1
+            initial={{ opacity: 0, x: -40, rotateZ: -1 }}
+            animate={{ opacity: 1, x: 0, rotateZ: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
+            
           >
             Why Choose Reverie Tech Solutions?
-          </h2>
+          </motion.h1>
           <p className="text-white/80 mb-6">
             Let’s transform your business with innovative technology solutions!
           </p>
@@ -50,7 +53,7 @@ export default function WhyChooseUs() {
 
         {/* Divider */}
         <div className="hidden md:flex justify-center items-center relative z-10">
-          <div className="w-[2px] h-64 bg-[#00ffe5] shadow-[0_0_15px_rgba(0,255,229,0.3)] rounded-full" />
+          <div className="w-[2px] h-64 bg-[color:var(--accent-alt)] shadow-[0_0_15px_rgba(0,255,229,0.3)] rounded-full" />
         </div>
 
         {/* Right Side */}
