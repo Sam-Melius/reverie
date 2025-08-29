@@ -3,6 +3,30 @@
 import { motion } from "framer-motion";
 import { roboto } from "../../../styles/fonts";
 import Link from "next/link";
+import { Video, Crop, Target,  } from "lucide-react";
+import ComprehensiveSection from "@/components/ComprehensiveSection";
+
+const services = [
+  {
+    title: "On-Lane Projection Mapping",
+    icon: <Video className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    description:
+      "We project interactive games and effects directly onto the lane. Each system is custom-calibrated to your exact install for pixel-perfect accuracy. Whether it's targets, animations, or real-time effects that respond to ball movement, every interaction is fluid and visually striking. The result is an immersive, high-energy experience that keeps bowlers engaged and entertained.",
+  },
+  {
+    title: "Anamorphic Image Engine",
+    icon: <Crop className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    description:
+      "Every animation is rendered with precise perspective correction, ensuring visuals appear undistorted and perfectly scaled from the bowler’s point of view at the foul line. This creates a natural sense of depth and realism, allowing projections to blend seamlessly with the physical lane for maximum visual impact.",
+  },
+  {
+    title: "Specto Tracking Integration",
+    icon: <Target className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    description:
+      "By integrating with Specto's advanced ball-tracking system, our platform responds in real time to ball speed, direction, and impact location. This unlocks responsive gameplay features, interactive target zones, and reactive lane effects—turning every shot into a dynamic experience that evolves with the bowler’s performance.",
+  },
+];
+
 
 export default function BowlingPage() {
   return (
@@ -41,42 +65,34 @@ export default function BowlingPage() {
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="max-w-5xl mx-auto bg-gradient-to-b from-[#121212] to-[#1a1a1a] border border-[color:var(--accent-alt)] rounded-xl p-8 md:p-12 mt-12 shadow-[0_0_60px_rgba(0,255,255,0.04)]"
+        className="max-w-5xl mx-auto  p-8 md:p-12 mt-6 "
       >
-        <h2 className="text-2xl md:text-3xl font-semibold text-[color:var(--accent-light)] mb-6 text-center">
+        <h2 className="text-2xl md:text-3xl font-semibold text-[color:var(--accent-light)] mb-2 text-center">
           Key Features
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "On-Lane Projection Mapping",
-              desc: "We project interactive games and effects directly onto the lane. Each system is custom-calibrated to your exact install for pixel-perfect accuracy.",
-            },
-            {
-              title: "Anamorphic Image Engine",
-              desc: "Every animation is rendered with perspective correction so visuals look perfect from the bowler's view at the foul line.",
-            },
-            {
-              title: "Specto Tracking Integration",
-              desc: "Using Specto, we track the ball’s movement in real time—enabling responsive gameplay, target zones, and dynamic lane effects.",
-            },
-          ].map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-              className="bg-[#181818] border border-[color:var(--accent)/20] p-6 rounded-lg shadow hover:shadow-[0_0_20px_color:var(--accent)] transition"
-            >
-              <h3 className="text-xl font-semibold text-[color:var(--accent)] mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-white/80">{feature.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                    className="bg-[#111827] rounded-2xl p-6 text-center shadow-lg hover:shadow-[0_0_20px_var(--accent)] border border-white/10 backdrop-blur-sm group"
+                  >
+                    <div className="text-[color:var(--accent-alt)] mb-4 group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/70 text-sm">
+                      {service.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
       </motion.section>
 
       <motion.section
@@ -93,102 +109,7 @@ export default function BowlingPage() {
           Whether you run a boutique alley or a full-scale entertainment complex, our immersive tech adds excitement, interactivity, and a wow factor that keeps players coming back.
         </p>
       </motion.section>
-
-      <motion.section
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
-  className="max-w-5xl mx-auto mt-24 px-6 py-16 md:px-12 bg-gradient-to-br from-[#0e0e0e] to-[#141414] border border-[color:var(--accent-alt)] rounded-xl shadow-[0_0_60px_rgba(0,255,255,0.03)] backdrop-blur"
->
-  <h2 className="text-3xl md:text-4xl font-bold text-center text-[color:var(--accent-light)] mb-8">
-    Comprehensive IT Services for Businesses
-  </h2>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white/90">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.1 }}
-      className="bg-[#1a1a1a] border border-[color:var(--accent)/20] p-6 rounded-lg"
-    >
-      <h3 className="text-xl font-semibold text-[color:var(--accent)] mb-2">
-        Managed IT Services
-      </h3>
-      <p>
-        We take the stress out of IT management by providing 24/7 monitoring,
-        maintenance, and support. Our services ensure your systems are always up to date,
-        secure, and running at peak performance.
-      </p>
-    </motion.div>
-
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
-      className="bg-[#1a1a1a] border border-[color:var(--accent)/20] p-6 rounded-lg"
-    >
-      <h3 className="text-xl font-semibold text-[color:var(--accent)] mb-2">
-        Cybersecurity & Compliance
-      </h3>
-      <p>
-        With cyber threats on the rise, protecting your business is more important than ever.
-        We implement cutting-edge security measures to safeguard sensitive data and ensure compliance
-        with industry regulations.
-      </p>
-    </motion.div>
-
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
-      className="bg-[#1a1a1a] border border-[color:var(--accent)/20] p-6 rounded-lg"
-    >
-      <h3 className="text-xl font-semibold text-[color:var(--accent)] mb-2">
-        Cloud & Remote Work Solutions
-      </h3>
-      <p>
-        Modern businesses need flexibility. We provide secure cloud solutions
-        that allow your team to collaborate from anywhere while keeping your data protected.
-      </p>
-    </motion.div>
-
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.4 }}
-      className="bg-[#1a1a1a] border border-[color:var(--accent)/20] p-6 rounded-lg"
-    >
-      <h3 className="text-xl font-semibold text-[color:var(--accent)] mb-2">
-        Custom Technology & Innovation
-      </h3>
-      <p>
-        We don’t just support your IT—we help you innovate. From custom app development
-        to workflow automation and Power BI dashboards, our team builds forward-thinking solutions
-        that align with your business goals.
-      </p>
-    </motion.div>
-  </div>
-
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.6 }}
-    className="mt-16 text-center"
-  >
-    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-      Stay Ahead with Innovative IT Solutions
-    </h3>
-    <p className="text-white/80 max-w-2xl mx-auto mb-6">
-      At Reverie Tech Solutions, we believe that technology should drive your business forward—
-      not slow it down. Our experts deliver scalable, secure, and innovative IT tailored to your mission.
-    </p>
-    <button className="px-6 py-3 rounded bg-[color:var(--accent)] text-black font-semibold shadow hover:shadow-lg transition shadow-md hover:drop-shadow-[0_0_20px_var(--accent-alt)] hover:bg-[color:var(--accent-alt)]">
-      Get a Free Quote
-    </button>
-  </motion.div>
-</motion.section>
-
+      <ComprehensiveSection />
     </main>
   );
 }
