@@ -99,7 +99,7 @@ const handleHover = (index) => {
             onMouseLeave={() => setHoveredIndex(null)}
             className="w-1/4 border-l border-r border-white/10 backdrop-blur-sm px-6 py-12 transition-all duration-300 hover:backdrop-blur-md group flex flex-col justify-center items-center text-center"
           >
-            <div className="mb-4 text-[color:var(--accent-alt)] group-hover:scale-110 transition-transform duration-300">
+            <div className="mb-4 text-[color:var(--accent-light)] group-hover:scale-110 transition-transform duration-300">
               {point.icon}
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">

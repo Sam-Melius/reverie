@@ -52,13 +52,13 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="bg-[color:var(--accent)] hover:bg-[color:var(--accent-alt)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
+              className="bg-[color:var(--accent)] hover:bg-[color:var(--accent-light)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
             >
               Get in Touch
             </Link>
             <Link
               href="/services/manage"
-              className="border border-[color:var(--accent-alt)] text-[color:var(--accent-alt)] hover:text-black hover:bg-[color:var(--accent-alt)] font-semibold py-3 px-6 rounded-md transition transform hover:scale-105 shadow hover:shadow-[0_0_20px_var(--accent-alt)]"
+              className="border border-[color:var(--accent-light)] text-[color:var(--accent-light)] hover:text-black hover:bg-[color:var(--accent-light)] font-semibold py-3 px-6 rounded-md transition transform hover:scale-105 shadow hover:shadow-[0_0_20px_var(--accent-alt)]"
             >
               Explore Services
             </Link>
