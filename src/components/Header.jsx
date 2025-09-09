@@ -232,6 +232,7 @@ export default function Header() {
                 </div>
 
                 <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+                <Link href="/amadaconference" onClick={() => setMobileOpen(false)}>Amada Conference</Link>
                 <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
               </nav>
             </motion.div>
