@@ -11,19 +11,19 @@ const services = [
     title: "On-Lane Projection Mapping",
     icon: <Video className="w-7 h-7 text-[color:var(--accent-alt)]" />,
     description:
-      "We project interactive games and effects directly onto the lane. Each system is custom-calibrated to your exact install for pixel-perfect accuracy. Whether it's targets, animations, or real-time effects that respond to ball movement, every interaction is fluid and visually striking. The result is an immersive, high-energy experience that keeps bowlers engaged and entertained.",
+      "We project interactive games and effects directly onto the lane. Each system is custom-calibrated to your exact install for pixel-perfect accuracy. Whether it's targets, animations, or real-time effects that respond to ball movement, every interaction is fluid and visually striking. The result is an immersive, high-energy experience that keeps athletes engaged and entertained.",
   },
   {
     title: "Anamorphic Image Engine",
     icon: <Crop className="w-7 h-7 text-[color:var(--accent-alt)]" />,
     description:
-      "Every animation is rendered with precise perspective correction, ensuring visuals appear undistorted and perfectly scaled from the bowler’s point of view at the foul line. This creates a natural sense of depth and realism, allowing projections to blend seamlessly with the physical lane for maximum visual impact.",
+      "Every animation is rendered with precise perspective correction, ensuring visuals appear undistorted and perfectly scaled from the athlete’s point of view at the foul line. This creates a natural sense of depth and realism, allowing projections to blend seamlessly with the physical lane for maximum visual impact.",
   },
   {
     title: "Specto Tracking Integration",
     icon: <Target className="w-7 h-7 text-[color:var(--accent-alt)]" />,
     description:
-      "By integrating with Specto's advanced ball-tracking system, our platform responds in real time to ball speed, direction, and impact location. This unlocks responsive gameplay features, interactive target zones, and reactive lane effects—turning every shot into a dynamic experience that evolves with the bowler’s performance.",
+      "By integrating with Specto's advanced ball-tracking system, our platform responds in real time to ball speed, direction, and impact location. This unlocks responsive gameplay features, interactive target zones, and reactive lane effects—turning every shot into a dynamic experience that evolves with the athlete’s performance.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function BowlingPage() {
             transition={{ duration: 0.7 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
           >
-          The Ultimate Interactive Bowling Experience
+          The Ultimate Interactive Sporting Experience
         </motion.h1>
         <motion.div
           className="mx-auto mt-2 mb-6 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
@@ -51,7 +51,7 @@ export default function BowlingPage() {
           transition={{ duration: 2, repeat: Infinity }}
         />
         <p className="text-lg text-white/80 mb-8">
-          We're on a mission to revolutionize how you think about bowling. From projection-mapped lanes to real-time ball tracking, our tech transforms bowling alleys into immersive digital playgrounds.
+          We're on a mission to revolutionize how you think about sports entertainment. From projection-mapped lanes to real-time ball tracking, our tech transforms sporting venues into immersive digital playgrounds.
         </p>
         <Link
           href="/contact"
