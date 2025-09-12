@@ -29,10 +29,10 @@ const industries = [
     href: "/industries/legal",
   },
   {
-    title: "Bowling Industry",
+    title: "Sporting Industry",
     icon: <Gamepad2 className="w-7 h-7 text-[color:var(--accent-alt)]" />,
     text: "Tech for entertainment venues including POS, networking, and support solutions.",
-    href: "/industries/bowling",
+    href: "/industries/sports",
   },
 ];
 

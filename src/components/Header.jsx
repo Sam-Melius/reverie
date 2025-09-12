@@ -51,7 +51,7 @@ export default function Header() {
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-[0px] right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l boreder-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
+                className="fixed top-[0px] z-40 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
                   className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
@@ -70,7 +70,7 @@ export default function Header() {
                 <div className="grid grid-cols-3 gap-6">
                   <DropdownItem
                     href="/services/manage"
-                    icon={<ServerCog className="w-6 h-6" />}
+                    icon={<ServerCog className="bg-none" />}
                     title="Manage"
                     desc="From IT management to cloud solutions, we ensure seamless operations so you can focus on growing your business."
                   />
@@ -106,7 +106,7 @@ export default function Header() {
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-[0px] right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
+                className="fixed top-[0px] z-40 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
                   className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
@@ -144,8 +144,8 @@ export default function Header() {
                     desc="Streamlined discovery, secure client data, and compliance-focused support."
                   />
                   <DropdownItem
-                    href="/industries/bowling"
-                    title="Bowling Industry"
+                    href="/industries/sports"
+                    title="Sports"
                     desc="Tech for entertainment venues including POS, networking, and support solutions."
                   />
                 </div>
@@ -156,8 +156,8 @@ export default function Header() {
           <Link href="/contact" className={navLink(pathname, "/contact")}>
             Contact
           </Link>
-          <Link href="/amadaconference" className={navLink(pathname, "/amadaconference")}>
-            Amada Conference
+          <Link href="/conference" className={navLink(pathname, "/conference")}>
+            Conference
           </Link>
           <Link href="/blog" className={navLink(pathname, "/blog")}>
             Blog
@@ -227,12 +227,12 @@ export default function Header() {
                     <Link href="/industries/healthcare" onClick={() => setMobileOpen(false)}>Healthcare</Link>
                     <Link href="/industries/entertainment" onClick={() => setMobileOpen(false)}>Entertainment</Link>
                     <Link href="/industries/legal" onClick={() => setMobileOpen(false)}>Legal</Link>
-                    <Link href="/industries/bowling" onClick={() => setMobileOpen(false)}>Bowling</Link>
+                    <Link href="/industries/sports" onClick={() => setMobileOpen(false)}>Sports</Link>
                   </div>
                 </div>
 
                 <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-                <Link href="/amadaconference" onClick={() => setMobileOpen(false)}>Amada Conference</Link>
+                <Link href="/conference" onClick={() => setMobileOpen(false)}>Conference</Link>
                 <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
               </nav>
             </motion.div>
@@ -258,9 +258,9 @@ function DropdownItem({ href, icon, title, desc }) {
     >
       <Link
         href={href}
-        className="group p-4 rounded-lg transition border border-transparent hover:bg-[color:var(--accent)/10] shadow hover:shadow-[0_0_15px_color:var(--accent-alt)] bg-[#0d0d0d]/70 backdrop-blur-sm"
+        className="group p-6 rounded-lg transition border border-transparent hover:bg-[color:var(--accent)/10] shadow hover:shadow-[0_0_15px_color:var(--accent-alt)] backdrop-blur-lg"
       >
-        <div className="flex items-center gap-3 mb-2 text-[color:var(--accent)] group-hover:scale-105 transition-transform">
+        <div className="flex items-center gap-3 text-[color:var(--accent)] group-hover:scale-105 transition-transform">
           {icon}
           <h3 className="text-lg font-semibold">{title}</h3>
         </div>
