@@ -35,7 +35,7 @@ export default function AmadaConferencePage() {
         transition={{ delay: 0.1, duration: 0.6 }}
         className="h-4 w-5/6 absolute z-0 top-20 bg-gradient-to-tr from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
         style={{
-          clipPath: "polygon(0% 0%, 85% 0, 100% 0%, 100% 100%)",
+          clipPath: "polygon(0% 0%, 85% 0, 100% 0%, 100% 90%)",
         }}
       />
       
@@ -59,7 +59,7 @@ export default function AmadaConferencePage() {
   initial={{ opacity: 0, scale: 0.8 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ delay: 0.5, duration: 0.6 }}
-  className="hidden md:block absolute top-24 right-0 w-72 h-72 bg-gradient-to-br from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-20"
+  className="hidden md:block absolute top-24 right-0 w-72 h-72 bg-gradient-to-br from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
   style={{
     clipPath: "polygon( 0% 0%, 100% 100%, 100% 85%, 0% -15%)",
   }}
@@ -214,7 +214,7 @@ export default function AmadaConferencePage() {
   initial={{ opacity: 0, scale: 0.8 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ delay: 0.5, duration: 0.6 }}
-  className="hidden md:block absolute bottom-4 left-0 w-72 h-72 bg-gradient-to-tl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-20"
+  className="hidden md:block absolute bottom-4 left-0 w-72 h-72 bg-gradient-to-tl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
   style={{
     clipPath: "polygon(100% 100%, 0% 0%, 0% 15%, 100% 115%)",
   }}
