@@ -119,6 +119,9 @@ export default function AmadaConferencePage() {
           </p>
         </motion.section>
 
+        {/* Divider */}
+        <div className="h-px my-12 bg-gradient-to-r from-transparent via-[color:var(--accent-light)] to-transparent" />
+
         {/* CONNECT */}
 <motion.section
   initial={{ opacity: 0, y: 30 }}
