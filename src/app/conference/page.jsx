@@ -101,56 +101,46 @@ export default function AmadaConferencePage() {
         {/* Divider */}
         <div className="h-px my-12 bg-gradient-to-r from-transparent via-[color:var(--accent-light)] to-transparent" />
 
-        {/* COMMITMENT */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10 shadow-md hover:shadow-[0_0_20px_var(--accent-light)]"
-        >
-          <h2 className="text-xl font-bold mb-4 text-[color:var(--accent)]">
-            OUR COMMITMENT TO AMADA SENIOR CARE:
-          </h2>
-          <p className="text-white text-sm leading-relaxed">
-            We understand the demands of delivering compassionate, non-medical in-home care and navigating
-            senior housing solutions. Our help desk ensures your technology runs flawlessly, allowing you to
-            focus on enriching lives and growing your franchise network.
-          </p>
-        </motion.section>
-
-        {/* Divider */}
-        <div className="h-px my-12 bg-gradient-to-r from-transparent via-[color:var(--accent-light)] to-transparent" />
-
         {/* CONNECT */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10 shadow-md hover:shadow-[0_0_20px_var(--accent-light)]"
-        >
-          <h2 className="text-xl font-bold mb-4 text-[color:var(--accent)]">
-            CONNECT WITH US
-          </h2>
-          <p className="text-white mb-4 text-sm leading-relaxed">
-            Visit us at our booth at the Amada Senior Care Conference 2025 to see how we can support your
-            franchise.{" "}
-            <strong className="text-[color:var(--accent-alt)]">
-              If you sign up at the conference, we are waiving any implementation fees
-            </strong>{" "}
-            <em>(value savings of up to $1,500)</em>!
-          </p>
-          <ul className="mb-4 space-y-1 text-white text-sm">
-            <li><strong>Email:</strong> sales@reverietech.com</li>
-            <li><strong>Phone:</strong> (817) 730-5600</li>
-            <li><strong>Website:</strong> www.reverietech.com</li>
-          </ul>
-          <p className="text-white text-sm leading-relaxed">
-            Schedule a Free Consultation Today! Partner with Reverie Tech Solutions for 24/7 help desk support
-            that keeps your Amada Senior Care franchise thriving.
-          </p>
-        </motion.section>
+<motion.section
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10 hover:shadow-[0_0_20px_var(--accent-light)]"
+>
+  <h2 className="text-xl font-bold mb-4 text-[color:var(--accent)]">
+    CONNECT WITH US
+  </h2>
+
+  <p className="text-white mb-4 text-sm leading-relaxed">
+    Visit us at our booth at the Amada Senior Care Conference 2025 to see how we can support your
+    franchise.{" "}
+    <strong className="text-[color:var(--accent-alt)]">
+      If you sign up at the conference, we are waiving any implementation fees
+    </strong>{" "}
+    <em>(value savings of up to $1,500)</em>!
+  </p>
+
+  <ul className="mb-4 space-y-1 text-white text-sm">
+    <li><strong>Email:</strong> sales@reverietech.com</li>
+    <li><strong>Phone:</strong> (817) 730-5600</li>
+  </ul>
+
+  <p className="text-white text-sm leading-relaxed mb-4">
+    Schedule a Free Consultation Today! Partner with Reverie Tech Solutions for 24/7 help desk support
+    that keeps your Amada Senior Care franchise thriving.
+  </p>
+
+  <a
+    href="/contact"
+    className="inline-block mt-4 px-6 py-3 rounded-lg text-white text-sm font-semibold bg-gradient-to-r from-[color:var(--accent-light)] to-[color:var(--accent)] hover:brightness-110 transition"
+  >
+    Contact Us
+  </a>
+</motion.section>
+
+        
       </section>
 
       {/* Bottom layered blue banners */}
