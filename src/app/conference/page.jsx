@@ -101,6 +101,24 @@ export default function AmadaConferencePage() {
         {/* Divider */}
         <div className="h-px my-12 bg-gradient-to-r from-transparent via-[color:var(--accent-light)] to-transparent" />
 
+        {/* COMMITMENT */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white/10 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10 shadow-md hover:shadow-[0_0_20px_var(--accent-light)]"
+        >
+          <h2 className="text-xl font-bold mb-4 text-[color:var(--accent)]">
+            OUR COMMITMENT TO AMADA SENIOR CARE:
+          </h2>
+          <p className="text-white text-sm leading-relaxed">
+            We understand the demands of delivering compassionate, non-medical in-home care and navigating
+            senior housing solutions. Our help desk ensures your technology runs flawlessly, allowing you to
+            focus on enriching lives and growing your franchise network.
+          </p>
+        </motion.section>
+
         {/* CONNECT */}
 <motion.section
   initial={{ opacity: 0, y: 30 }}
