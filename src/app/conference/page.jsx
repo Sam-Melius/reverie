@@ -11,7 +11,7 @@ export default function AmadaConferencePage() {
         initial={{ y: -80, opacity: 0, scale: 0.95 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
-        className="hidden md:block h-4 w-5/6 absolute z-0 top-20 bg-gradient-to-tr from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
+        className="hidden md:block h-4 w-full absolute z-0 top-20 bg-gradient-to-tr from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
         style={{
           clipPath: "polygon(0% 0%, 85% 0, 100% 0%, 100% 90%)",
         }}
