@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import BackgroundFX from "../components/BackgroundFX";
 import { roboto } from '../styles/fonts';
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Reverie Tech Solutions",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
         <BackgroundFX />
         <Header />
         {children}
+        <Analytics />
       </body>
       <Footer />
     </html>
