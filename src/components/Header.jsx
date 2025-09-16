@@ -42,7 +42,7 @@ export default function Header() {
             onMouseLeave={() => setOpen(false)}
             className="group relative"
           >
-            <span className="text-white/90 hover:text-[color:var(--accent)] cursor-pointer">
+            <span className="text-white/90 hover:text-[color:var(--accent)] pb-20 cursor-pointer">
               Services
             </span>
             {open === "services" && (
@@ -51,7 +51,7 @@ export default function Header() {
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-[0px] z-40 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
+                className="fixed top-20 z-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
                   className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
@@ -97,7 +97,7 @@ export default function Header() {
             onMouseLeave={() => setOpen(false)}
             className="group relative"
           >
-            <span className="text-white/90 hover:text-[color:var(--accent)] cursor-pointer">
+            <span className="text-white/90 hover:text-[color:var(--accent)] pb-20 cursor-pointer">
               Industries
             </span>
             {open === "industries" && (
@@ -106,7 +106,7 @@ export default function Header() {
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-[0px] z-40 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
+                className="fixed top-20 z-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
                   className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
