@@ -156,9 +156,9 @@ export default function Header() {
           <Link href="/contact" className={navLink(pathname, "/contact")}>
             Contact
           </Link>
-          <Link href="/conference" className={navLink(pathname, "/conference")}>
+          {/* <Link href="/conference" className={navLink(pathname, "/conference")}>
             Conference
-          </Link>
+          </Link> */}
           <Link href="/blog" className={navLink(pathname, "/blog")}>
             Blog
           </Link>
@@ -232,7 +232,7 @@ export default function Header() {
                 </div>
 
                 <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
-                <Link href="/conference" onClick={() => setMobileOpen(false)}>Conference</Link>
+                {/* <Link href="/conference" onClick={() => setMobileOpen(false)}>Conference</Link> */}
                 <Link href="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
               </nav>
             </motion.div>
