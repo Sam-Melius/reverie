@@ -61,10 +61,10 @@ export default function Header() {
                 >
                   Reverie Tech Services
                   <motion.div
-                    className="absolute left-1/2 -translate-x-1/2 bottom-[-6px] h-[2px] w-32 bg-[color:var(--accent)] rounded-full shimmer"
-                    animate={{ x: [-10, 10, -10] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
+          className="mx-auto mt-2 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
+          animate={{ x: [-10, 10, -10] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
                 </motion.div>
 
                 <div className="grid grid-cols-3 gap-6">
@@ -116,10 +116,10 @@ export default function Header() {
                 >
                   Reverie Tech Industries
                   <motion.div
-                    className="absolute left-1/2 -translate-x-1/2 bottom-[-6px] h-[2px] w-32 bg-[color:var(--accent)] rounded-full shimmer"
-                    animate={{ x: [-10, 10, -10] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
+          className="mx-auto mt-2 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
+          animate={{ x: [-10, 10, -10] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        />
                 </motion.div>
 
                 <div className="grid grid-cols-3 gap-6">
