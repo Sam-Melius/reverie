@@ -51,7 +51,7 @@ export default function Header() {
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-20 z-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
+                className="fixed top-20 z-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-8 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
                   className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
@@ -106,7 +106,7 @@ export default function Header() {
                 animate={{ opacity: 1, scaleY: 1 }}
                 exit={{ opacity: 0, scaleY: 0.7 }}
                 transition={{ type: "spring", duration: 0.5 }}
-                className="fixed top-20 z-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-6 w-[700px] backdrop-blur-xl origin-top"
+                className="fixed top-20 z-0 right-0 -translate-x-1/2 bg-gradient-to-b from-[#0b0b0b]/95 to-[#0d0d0d]/90 border-l border-b border-[color:var(--accent)] shadow-lg rounded-bl-xl px-8 py-8 w-[700px] backdrop-blur-xl origin-top"
               >
                 <motion.div
                   className="text-[color:var(--accent)] text-lg font-bold text-center mb-6 relative"
@@ -258,7 +258,7 @@ function DropdownItem({ href, icon, title, desc }) {
     >
       <Link
         href={href}
-        className="group p-6 rounded-lg transition border border-transparent hover:bg-[color:var(--accent)/10] shadow hover:shadow-[0_0_15px_color:var(--accent-alt)] backdrop-blur-lg"
+        className="group p-4 rounded-lg transition border border-transparent hover:bg-[color:var(--accent)/10] shadow hover:shadow-[0_0_15px_color:var(--accent-alt)] backdrop-blur-lg"
       >
         <div className="flex items-center gap-3 text-[color:var(--accent)] group-hover:scale-105 transition-transform">
           {icon}
