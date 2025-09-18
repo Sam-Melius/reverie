@@ -24,7 +24,40 @@ const services = [
 
 export default function HealthcarePage() {
   return (
-    <main className={`min-h-screen text-white px-6 py-20 md:px-12 ${roboto.className}`}>
+    <section className="relative w-full min-h-screen text-white px-6 lg:px-20 py-24 overflow-hidden">
+                  {/* Top layered blue banners */}
+      <motion.div
+        initial={{ y: -80, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+        className="hidden md:block h-4 w-full absolute z-0 top-20 bg-gradient-to-tr from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
+        style={{
+          clipPath: "polygon(0% 0%, 85% 0, 100% 0%, 100% 90%)",
+        }}
+      />
+
+      {/* Top right triangle */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="block absolute top-20 right-0 w-64 h-64 bg-gradient-to-br from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(100% 0, 100% 100%, 0 0)",
+        }}
+      />
+
+      {/* Top trapezoid */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="block absolute top-24 right-0 w-72 h-72 bg-gradient-to-br from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(0% 0%, 100% 100%, 100% 85%, 0% -15%)",
+        }}
+      />
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,16 +68,16 @@ export default function HealthcarePage() {
             initial={{ opacity: 0, x: -40, rotateZ: -1 }}
             animate={{ opacity: 1, x: 0, rotateZ: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)] mt-4"
           >
           Innovative Solutions for Healthcare Organizations
         </motion.h1>
         <motion.div
-          className="mx-auto mt-2 mb-6 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
+          className="mx-auto mt-4 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
           animate={{ x: [-10, 10, -10] }}
           transition={{ duration: 2, repeat: Infinity }}
         />
-        <motion.div className="text-xl md:text-2xl font-semibold  mb-6 text-center">
+        <motion.div className="text-xl md:text-2xl font-semibold my-4 text-center">
           Why Healthcare Providers Choose Reverie Tech Solutions
         </motion.div>
         <Link
@@ -77,6 +110,36 @@ export default function HealthcarePage() {
               ))}
             </div>
             <ComprehensiveSection />
-    </main>
+                  {/* Bottom layered blue banners */}
+      <motion.div
+        initial={{ y: 100, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+        className="hidden md:block h-4 w-full absolute z-0 bottom-0 bg-gradient-to-bl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
+        style={{
+          clipPath: "polygon(0 0, 15% 100%, 100% 100%, 0% 0%)",
+        }}
+      />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="block absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(0 100%, 0 0, 100% 100%)",
+        }}
+      />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="block absolute bottom-4 left-0 w-72 h-72 bg-gradient-to-tl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(100% 100%, 0% 0%, 0% 15%, 100% 115%)",
+        }}
+      />
+    </section>
   );
 }

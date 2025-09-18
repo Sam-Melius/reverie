@@ -34,8 +34,40 @@ const services = [
 
 export default function ProtectPage() {
   return (
-    <main className="text-white min-h-screen py-20 px-6 lg:px-24 overflow-hidden">
-      <section className="relative text-center mb-16">
+    
+      <section className="relative text-center mb-16 text-white min-h-screen py-24 px-6 lg:px-24 overflow-hidden">
+                    {/* Top layered blue banners */}
+      <motion.div
+        initial={{ y: -80, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+        className="hidden md:block h-4 w-full absolute z-0 top-20 bg-gradient-to-tr from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
+        style={{
+          clipPath: "polygon(0% 0%, 85% 0, 100% 0%, 100% 90%)",
+        }}
+      />
+
+      {/* Top right triangle */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="block absolute top-20 right-0 w-64 h-64 bg-gradient-to-br from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(100% 0, 100% 100%, 0 0)",
+        }}
+      />
+
+      {/* Top trapezoid */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="block absolute top-24 right-0 w-72 h-72 bg-gradient-to-br from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(0% 0%, 100% 100%, 100% 85%, 0% -15%)",
+        }}
+      />
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,15 +103,15 @@ export default function ProtectPage() {
             Get a free quote
           </Link>
         </motion.div>
-      </section>
+      
 
-      <section className="relative">
+      
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-center text-[color:var(--accent-light)] mb-16"
+          className="text-3xl md:text-5xl font-bold text-center text-[color:var(--accent-light)] my-16"
         >
           Secure Your Business with Proven Protection
         </motion.h2>
@@ -107,7 +139,38 @@ export default function ProtectPage() {
                 ))}
               </div>
         <WhyChooseReverieSection />
+                    {/* Bottom layered blue banners */}
+      <motion.div
+        initial={{ y: 100, opacity: 0, scale: 0.95 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
+        className="hidden md:block h-4 w-full absolute z-0 bottom-0 bg-gradient-to-bl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)]"
+        style={{
+          clipPath: "polygon(0 0, 15% 100%, 100% 100%, 0% 0%)",
+        }}
+      />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="block absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(0 100%, 0 0, 100% 100%)",
+        }}
+      />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        className="block absolute bottom-4 left-0 w-72 h-72 bg-gradient-to-tl from-[#00bfff] via-[color:var(--accent-light)] to-[color:var(--accent)] z-0"
+        style={{
+          clipPath: "polygon(100% 100%, 0% 0%, 0% 15%, 100% 115%)",
+        }}
+      />
       </section>
-    </main>
+      
+    
   );
 }

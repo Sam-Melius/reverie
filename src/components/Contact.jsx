@@ -15,11 +15,11 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="relative bg-[#0b0b0b] text-white py-32 px-6 overflow-hidden"
+      className="relative  text-white py-32 px-6 overflow-hidden"
     >
       {/* ✨ Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.02)_1px,transparent_1px)] [background-size:30px_30px] opacity-30 pointer-events-none z-0" />
-      <div className="absolute -top-40 left-0 w-[600px] h-[600px] bg-[color:var(--accent)] blur-[180px] rounded-full z-0" />
+      
+      
 
       <div className="relative z-10 max-w-4xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-[color:var(--accent-alt)] mb-4">
