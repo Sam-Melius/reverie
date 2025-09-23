@@ -4,6 +4,7 @@ export const allPostsQuery = `*[_type == "post"] | order(_createdAt desc){
   slug,
   publishedAt,
   excerpt,
+  content,
   mainImage {
     asset->{
       _id,
@@ -19,7 +20,7 @@ export const postBySlugQuery = `*[_type == "post" && slug.current == $slug][0]{
   title,
   slug,
   publishedAt,
-  body,
+  content,
   mainImage {
     asset->{
       _id,
