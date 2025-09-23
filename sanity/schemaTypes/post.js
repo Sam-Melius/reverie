@@ -45,13 +45,19 @@ export default {
       type: 'text',
       description: 'Short preview text for summaries or cards.',
     },
-    {
+        {
       name: 'content',
       title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }, { type: 'image' }],
-      validation: (Rule) => Rule.required(),
+      type: 'text',
+      description: 'Content',
     },
+    // {
+    //   name: 'content',
+    //   title: 'Content',
+    //   type: 'array',
+    //   of: [{ type: 'block' }, { type: 'image' }, { type: 'text'} ], 
+    //   validation: (Rule) => Rule.required(),
+    // },
   ],
   preview: {
     select: {
