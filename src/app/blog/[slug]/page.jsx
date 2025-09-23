@@ -11,9 +11,9 @@ export default async function BlogPost({ params }) {
   if (!post) return <div className="text-white p-10">Post not found.</div>;
 
   return (
-    <main className={`min-h-screen bg-[#0a0a0a] text-white px-6 py-20 ${roboto.className}`}>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-yellow-400 mb-2">{post.title}</h1>
+    <main className={`min-h-screen text-white px-6 py-20 ${roboto.className}`}>
+      <div className="max-w-3xl mx-auto mt-10">
+        <h1 className="text-4xl font-bold text-[color:var(--accent-light)] mb-2">{post.title}</h1>
         <p className="text-sm text-gray-400 mb-6">
           {new Date(post.publishedAt).toLocaleDateString()}
         </p>
@@ -25,7 +25,7 @@ export default async function BlogPost({ params }) {
           />
         )}
         <div className="prose prose-invert max-w-none">
-          <PortableText value={post.body} />
+          <PortableText value={post.content} />
         </div>
       </div>
     </main>
