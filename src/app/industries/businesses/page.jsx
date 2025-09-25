@@ -116,6 +116,7 @@ export default function BusinessIndustryPage() {
                   <p className="text-white/70 text-sm">
                     {service.description}
                   </p>
+
                 </motion.div>
               ))}
             </div>
