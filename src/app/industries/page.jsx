@@ -2,34 +2,56 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import WhyChooseReverieSection from "@/components/WhyChooseReverieSection";
-import { Wrench, ShieldCheck, BrainCircuit } from "lucide-react";
+import ComprehensiveSection from "@/components/ComprehensiveSection";
+import {
+  Gavel,
+  Stethoscope,
+  Briefcase,
+  Clapperboard,
+  Trophy,
+} from "lucide-react";
 
-const services = [
+const industries = [
   {
-    title: "Manage",
+    title: "Legal",
     description:
-      "We handle your day-to-day IT infrastructure so your business runs smoothly—from workstations to cloud environments.",
-    icon: <Wrench className="w-7 h-7 text-[color:var(--accent-alt)]" />,
-    href: "/services/manage",
+      "We support legal teams with secure discovery tools and IT infrastructure built for compliance. From public defender offices to private law firms, Reverie Tech delivers speed and security.",
+    icon: <Gavel className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    href: "/industries/legal",
   },
   {
-    title: "Protect",
+    title: "Healthcare",
     description:
-      "Cybersecurity solutions designed to keep your business safe. Firewalls, endpoint protection, backups, and more.",
-    icon: <ShieldCheck className="w-7 h-7 text-[color:var(--accent-alt)]" />,
-    href: "/services/protect",
+      "HIPAA-compliant infrastructure for clinics, urgent care centers, and telehealth providers. Secure data management, reliable uptime, and scalable solutions.",
+    icon: <Stethoscope className="w-7 h-7 text-[color:var(--accent-alt)]"
+     />,
+     href: "/industries/healthcare",
   },
   {
-    title: "Innovate",
+    title: "Business",
     description:
-      "Unlock the full potential of your business with emerging tech, automations, and modern app development.",
-    icon: <BrainCircuit className="w-7 h-7 text-[color:var(--accent-alt)]" />,
-    href: "/services/innovate",
+      "From small startups to large enterprises, we provide IT services that help companies grow, protect their data, and operate efficiently in a hybrid world.",
+    icon: <Briefcase className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    href: "/industries/business",
   },
+  {
+    title: "Entertainment",
+    description:
+      "IT and networking for content creators, studios, and venues. Secure file sharing, fast rendering environments, and support for production workflows.",
+    icon: <Clapperboard className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    href: "/industries/entertainment",
+  },
+    {
+  title: "Sports",
+  description:
+    "Technology infrastructure for stadiums, teams, and training centers. From secure Wi-Fi and AV support to athlete performance tracking and fan engagement platforms, we power the future of sports.",
+  icon: <Trophy className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    href: "/industries/sports",
+  },
+  
 ];
 
-export default function ServicesPage() {
+export default function IndustriesPage() {
   return (
     <section className="relative w-full min-h-screen text-white px-6 lg:px-20 py-24 overflow-hidden">
                   {/* Top layered blue banners */}
@@ -65,6 +87,7 @@ export default function ServicesPage() {
         }}
       />
 
+      {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -77,7 +100,7 @@ export default function ServicesPage() {
           transition={{ duration: 0.7 }}
           className="text-4xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[color:var(--accent-light)] via-[color:var(--accent)] to-[color:var(--accent-light)] drop-shadow-[0_0_10px_var(--accent-alt)]"
         >
-          Reverie Tech Services
+          Reverie Tech Industries
         </motion.h1>
         <motion.div
           className="mx-auto my-4 h-[3px] w-40 bg-[color:var(--accent)] rounded-full shimmer"
@@ -85,13 +108,15 @@ export default function ServicesPage() {
           transition={{ duration: 2, repeat: Infinity }}
         />
         <p className="mt-4 text-white/80 text-lg max-w-3xl mx-auto mb-6">
-          From proactive management to secure infrastructure and innovative app development, our services are built to support your business every step of the way.
+          We specialize in delivering secure, scalable IT solutions for critical industries.
+          Whether you're in healthcare, law, entertainment, or corporate business—we build the
+          infrastructure that powers your mission.
         </p>
         <Link
           href="/contact"
           className="bg-[color:var(--accent)] hover:bg-[color:var(--accent-alt)] text-black font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-[0_0_20px_var(--accent-alt)] transition transform hover:scale-105"
         >
-          Request a Free Quote
+          Get in Touch
         </Link>
       </motion.section>
 
@@ -103,37 +128,52 @@ export default function ServicesPage() {
         transition={{ duration: 1 }}
       />
 
-      {/* Features */}
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="bg-[#111827] rounded-2xl p-6 text-center shadow-lg hover:shadow-[0_0_20px_var(--accent)] border border-white/10 backdrop-blur-sm group"
-          >
-            <div className="text-[color:var(--accent-alt)] mb-4 group-hover:scale-110 transition-transform">
-              {service.icon}
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">
-              {service.title}
-            </h3>
-            <p className="text-white/70 text-sm">{service.description}</p>
-                        <Link
-              href={service.href}
+      {/* Industries Cards */}
+<div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+  {industries.map((industry, index) => {
+    const isLastOddItem =
+      industries.length % 2 === 1 && index === industries.length - 1;
+
+    const card = (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        className="bg-[#111827] rounded-2xl p-6 text-center shadow-lg hover:shadow-[0_0_20px_var(--accent)] border border-white/10 backdrop-blur-sm group w-full max-w-md"
+      >
+        <div className="text-[color:var(--accent-alt)] mb-4 group-hover:scale-110 transition-transform">
+          {industry.icon}
+        </div>
+        <h3 className="text-xl font-semibold text-white mb-2">
+          {industry.title}
+        </h3>
+        <p className="text-white/70 text-sm">{industry.description}</p>
+        <Link
+              href={industry.href}
               className="text-[color:var(--accent-light)] underline"
             >
               Explore →
             </Link>
-          </motion.div>
-        ))}
+      </motion.div>
+    );
+
+    // Wrap the final item in a full-width flexbox if it's alone on the last row
+    return isLastOddItem ? (
+      <div key={index} className="lg:col-span-2 flex justify-center">
+        {card}
       </div>
+    ) : (
+      card
+    );
+  })}
+</div>
 
-      <WhyChooseReverieSection />
 
-            {/* Bottom layered blue banners */}
+      <ComprehensiveSection />
+
+      {/* Bottom Gradient Shapes */}
       <motion.div
         initial={{ y: 100, opacity: 0, scale: 0.95 }}
         animate={{ y: 0, opacity: 1, scale: 1 }}
@@ -143,7 +183,6 @@ export default function ServicesPage() {
           clipPath: "polygon(0 0, 15% 100%, 100% 100%, 0% 0%)",
         }}
       />
-
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -153,7 +192,6 @@ export default function ServicesPage() {
           clipPath: "polygon(0 100%, 0 0, 100% 100%)",
         }}
       />
-
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
