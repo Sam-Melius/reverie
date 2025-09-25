@@ -16,7 +16,7 @@ export default function Footer() {
         {/* Logo + Tagline */}
         <div className="space-y-4">
               <img
-    src="/WhiteLogo.png"
+    src="/LogoVibrant.jpg"
     alt="Reverie Tech Logo"
     className="w-[200px] h-auto object-contain"
   />
