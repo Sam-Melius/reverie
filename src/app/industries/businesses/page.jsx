@@ -116,12 +116,7 @@ export default function BusinessIndustryPage() {
                   <p className="text-white/70 text-sm">
                     {service.description}
                   </p>
-                              <Link
-              href={industry.href}
-              className="text-[color:var(--accent-light)] underline"
-            >
-              Explore →
-            </Link>
+
                 </motion.div>
               ))}
             </div>
