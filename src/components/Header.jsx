@@ -14,14 +14,15 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-[color:var(--accent)/10]">
+    <header className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-[color:var(--accent)/10]">
       <div
         className={`max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${roboto.className}`}
       >
+        
         {/* Logo + Name */}
         <Link href="/" className="flex items-center w-auto">
           <img
-            src="/LogoWhiteText.png"
+            src="/LogoVibrant.jpg"
             alt="Reverie Tech Logo"
             className="w-[150px] h-auto object-contain"
           />
