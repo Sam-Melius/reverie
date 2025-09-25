@@ -42,9 +42,9 @@ export default function Header() {
             onMouseLeave={() => setOpen(false)}
             className="group relative"
           >
-            <span className="text-white/90 hover:text-[color:var(--accent)] pb-20 cursor-pointer">
+            <Link href="/services" className="text-white/90 hover:text-[color:var(--accent)] pb-20 cursor-pointer">
               Services
-            </span>
+            </Link>
             {open === "services" && (
               <motion.div
                 initial={{ opacity: 0, scaleY: 0.7 }}
@@ -97,9 +97,9 @@ export default function Header() {
             onMouseLeave={() => setOpen(false)}
             className="group relative"
           >
-            <span className="text-white/90 hover:text-[color:var(--accent)] pb-20 cursor-pointer">
+            <Link href="/industries" className="text-white/90 hover:text-[color:var(--accent)] pb-20 cursor-pointer">
               Industries
-            </span>
+            </Link>
             {open === "industries" && (
               <motion.div
                 initial={{ opacity: 0, scaleY: 0.7 }}
