@@ -39,11 +39,11 @@ export default function Footer() {
                 <div className="space-y-3">
           <h4 className="text-lg font-semibold text-[color:var(--accent)]">Industries:</h4>
           <ul className="space-y-2">
-            <li><Link href="/industries/business" className="hover:text-[color:var(--accent-alt)]">Business</Link></li>
+            <li><Link href="/industries/businesses" className="hover:text-[color:var(--accent-alt)]">Business</Link></li>
             <li><Link href="/industries/healthcare" className="hover:text-[color:var(--accent-alt)]">Healthcare</Link></li>
             <li><Link href="/industries/entertainment" className="hover:text-[color:var(--accent-alt)]">Entertainment</Link></li>
             <li><Link href="/industries/legal" className="hover:text-[color:var(--accent-alt)]">Legal</Link></li>
-            <li><Link href="/industries/bowling" className="hover:text-[color:var(--accent-alt)]">Bowling</Link></li>
+            <li><Link href="/industries/sports" className="hover:text-[color:var(--accent-alt)]">Sports</Link></li>
             
           </ul>
         </div>
