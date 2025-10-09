@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Building, Hospital, Store, Gavel, Gamepad2 } from "lucide-react";
+import { Building, Hospital, Store, Gavel, Gamepad2, Car } from "lucide-react";
 
 const industries = [
   {
@@ -33,6 +33,12 @@ const industries = [
     icon: <Gamepad2 className="w-7 h-7 text-[color:var(--accent-alt)]" />,
     text: "Tech for entertainment venues including POS, networking, and support solutions.",
     href: "/industries/sports",
+  },
+    {
+    title: "Automotive",
+    icon: <Car className="w-7 h-7 text-[color:var(--accent-alt)]" />,
+    text: "Secure, scalable IT support for dealerships, repair centers, and auto service chains.",
+    href: "/industries/automotive",
   },
 ];
 

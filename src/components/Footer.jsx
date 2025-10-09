@@ -44,6 +44,7 @@ export default function Footer() {
             <li><Link href="/industries/entertainment" className="hover:text-[color:var(--accent-alt)]">Entertainment</Link></li>
             <li><Link href="/industries/legal" className="hover:text-[color:var(--accent-alt)]">Legal</Link></li>
             <li><Link href="/industries/sports" className="hover:text-[color:var(--accent-alt)]">Sports</Link></li>
+            <li><Link href="/industries/auto" className="hover:text-[color:var(--accent-alt)]">Auto</Link></li>
             
           </ul>
         </div>

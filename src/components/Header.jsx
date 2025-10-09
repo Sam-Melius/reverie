@@ -149,6 +149,11 @@ export default function Header() {
                     title="Sports"
                     desc="Tech for entertainment venues including POS, networking, and support solutions."
                   />
+                  <DropdownItem
+                    href="/industries/auto"
+                    title="Auto"
+                    desc="Secure, scalable IT support for dealerships, repair centers, and auto service chains."
+                  />
                 </div>
               </motion.div>
             )}
@@ -229,6 +234,7 @@ export default function Header() {
                     <Link href="/industries/entertainment" onClick={() => setMobileOpen(false)}>Entertainment</Link>
                     <Link href="/industries/legal" onClick={() => setMobileOpen(false)}>Legal</Link>
                     <Link href="/industries/sports" onClick={() => setMobileOpen(false)}>Sports</Link>
+                    <Link href="/industries/auto" onClick={() => setMobileOpen(false)}>Auto</Link>
                   </div>
                 </div>
 
