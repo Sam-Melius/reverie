@@ -73,7 +73,7 @@ export default function ContactForm() {
               Services of Interest
             </label>
             <div className="grid sm:grid-cols-2 gap-3">
-              {["24/7 HelpDesk Support", "Cloud Services", "Cybersecurity", "Network Management"].map((service) => (
+              {["24/7 HelpDesk Support", "Cloud Services", "Cybersecurity", "Network Management", "Modern Business Phone Systems", "Other Services"].map((service) => (
                 <label key={service} className="flex items-center gap-2">
                   <input
                     type="checkbox"
