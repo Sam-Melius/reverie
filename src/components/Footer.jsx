@@ -51,7 +51,9 @@ export default function Footer() {
 
         <div classname="space-y-3">
           <h4 className="text-lg font-semibold text-[color:var(--accent-alt)] hover:text-[color:var(--accent)]"><Link href="/contact">Contact</Link></h4>
+          <h4 className="text-lg font-semibold text-[color:var(--accent-alt)] hover:text-[color:var(--accent)]"><Link href="/privacy-policy">Privacy Policy</Link></h4>
         </div>
+
         {/* Contact */}
         {/* <div className=" space-y-3">
           <h4 className="text-lg font-semibold text-[color:var(--accent)]"><Link href="/contact">Contact</Link></h4>
