@@ -17,6 +17,7 @@
         "next-sanity": "^7.1.4",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "react-is": "^19.2.2",
         "react-parallax-tilt": "^1.7.305",
         "sanity": "^3.42.1",
         "styled-components": "^6.1.19"
@@ -12746,6 +12747,12 @@
           "optional": true
         }
       }
+    },
+    "node_modules/react-is": {
+      "version": "19.2.2",
+      "resolved": "https://registry.npmjs.org/react-is/-/react-is-19.2.2.tgz",
+      "integrity": "sha512-ADrk8mxPwhyj+IB8EnMMRzxnon5hJrOdEZl+mCrrHXfPGGPYHdRm1962fvXUiWAu/ZC1G+OTgBN3Puq57iS4Yg==",
+      "license": "MIT"
     },
     "node_modules/react-lifecycles-compat": {
       "version": "3.0.4",
