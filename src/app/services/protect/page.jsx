@@ -35,7 +35,7 @@ const services = [
 export default function ProtectPage() {
   return (
     
-      <section className="relative text-center mb-16 text-white min-h-screen py-24 px-6 lg:px-24 overflow-hidden">
+      <section className="relative text-center text-white min-h-screen py-24 px-6 lg:px-24 overflow-hidden">
                     {/* Top layered blue banners */}
       <motion.div
         initial={{ y: -80, opacity: 0, scale: 0.95 }}
