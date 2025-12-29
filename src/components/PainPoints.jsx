@@ -10,7 +10,7 @@ const painPoints = [
     icon: <ShieldCheck size={50} />,
     title: "Security Risks",
     description:
-      "Outdated or poorly maintained systems pose a significant threat to modern organizations, exposing them to a wide range of cybersecurity vulnerabilities. Data breaches, ransomware attacks, and system hijackings can lead to devastating financial losses, legal consequences, and permanent damage to a company’s reputation.",
+      "Outdated or poorly maintained systems pose a significant threat to modern organizations, creating gaps that attackers exploit to breach networks and compromise sensitive information. Data breaches, ransomware attacks, and system hijackings can result in severe financial loss, legal exposure, and lasting reputational harm. By adopting NIST-aligned safeguards and pursuing CMMC-ready security maturity, businesses can greatly reduce these vulnerabilities and ensure consistent protection against modern threats.",
     bg: "/SecurityRisk.png",
   },
   {

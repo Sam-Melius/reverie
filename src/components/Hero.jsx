@@ -41,7 +41,7 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="mt-6 text-lg sm:text-xl text-white/80"
           >
-            With a proactive approach, we help businesses navigate evolving challenges by streamlining operations, protecting critical data, and implementing cutting-edge tools. Our mission is to provide innovative tech solutions, simplify IT, reduce risks, and unlock new opportunities for success.
+            With a proactive approach, we help businesses navigate evolving challenges by streamlining operations, protecting critical data, and implementing cutting-edge tools. Our mission is to deliver innovative technology solutions that simplify IT, reduce risk, and unlock new opportunities for success. We reinforce every environment with cybersecurity practices aligned to <span className="font-bold text-[color:var(--accent-alt)]">NIST</span> standards and support organizations pursuing <span className="font-bold text-[color:var(--accent-alt)]">CMMC</span> compliance—ensuring your business stays secure, resilient, and ready for the future.
           </motion.p>
 
           <motion.div

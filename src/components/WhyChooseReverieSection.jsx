@@ -12,28 +12,28 @@ const features = [
   {
     icon: <Radar size={36} />,
     title: "Proactive Threat Defense",
-    desc: "We anticipate and eliminate threats before they reach your systems. AI-driven prevention, not just detection.",
+    desc: "We anticipate and eliminate threats before they reach your systems. Continuous monitoring, AI-driven prevention, and response practices aligned to NIST cybersecurity guidance keep your environment a step ahead of attackers.",
   },
   {
     icon: <AlarmClockCheck size={36} />,
     title: "Disaster-Proof Recovery",
-    desc: "Our systems replicate and restore in seconds, not hours. Failures don't stop your business anymore.",
+    desc: "Our systems replicate and restore in seconds, not hours. Resilient backup, ransomware-ready recovery plans, and tested playbooks ensure outages and incidents don’t stop your business—or your CMMC and NIST-aligned obligations.",
   },
   {
     icon: <ShieldCheck size={36} />,
     title: "Industry-Tuned Compliance",
-    desc: "Compliance made automatic. From HIPAA to SOC2, we bake it into your infrastructure from day one.",
+    desc: "Compliance made practical. From HIPAA and SOC 2 to CMMC and NIST 800-171, we map technical controls to real business needs and help you maintain the documentation, monitoring, and evidence auditors expect.",
   },
   {
     icon: <LockKeyhole size={36} />,
     title: "Adaptive Security Fabric",
-    desc: "Firewalls that learn. Rulesets that evolve. Defense that scales with your company and its risks.",
+    desc: "Firewalls that learn. Rulesets that evolve. An adaptive security fabric that scales with your company and its risks, while staying aligned to modern frameworks like the NIST Cybersecurity Framework and CMMC 2.0 maturity goals.",
   },
 ];
 
 export default function WhyReverieAltLayout() {
   return (
-    <section className="w-full relative overflow-hidden py-28 px-6 md:px-12  text-white">
+    <section className="w-full relative overflow-hidden py-28 px-6 md:px-12 text-white">
       {/* Diagonal gradient background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute w-full h-full bg-gradient-to-br from-[color:var(--accent-alt)/10] to-transparent rotate-6 blur-3xl" />
@@ -51,7 +51,7 @@ export default function WhyReverieAltLayout() {
           Why Choose Reverie Tech?
         </h2>
         <p className="mt-4 text-white/70 text-lg max-w-2xl mx-auto">
-          Not your average MSP. We design for resilience, speed, and control.
+          Not your average MSP. We design for resilience, security, and control—with CMMC- and NIST-informed practices built in from day one.
         </p>
       </motion.div>
 
