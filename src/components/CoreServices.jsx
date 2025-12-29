@@ -16,8 +16,8 @@ const services = [
     title: "PROTECT",
     icon: <ShieldCheck className="w-8 h-8 text-white" />,
     image: "/Protect.png",
-    text: "We protect your critical data, systems, and networks with enterprise-grade cybersecurity.",
-    sub: "HIPAA compliance, proactive monitoring, and risk mitigation strategies.",
+    text: "We safeguard your data, systems, and networks with enterprise-grade cybersecurity built on NIST best practices.",
+    sub: "HIPAA compliance, CMMC support, proactive monitoring, and risk mitigation strategies.",
     href: "/services/protect",
   },
   {

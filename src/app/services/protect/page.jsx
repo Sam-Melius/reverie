@@ -10,27 +10,28 @@ const services = [
     icon: <ShieldCheck size={40} />,
     title: "Managed Security Services",
     description:
-      "Cyber threats are constantly evolving, and businesses need proactive security measures to stay protected. Our managed security services provide continuous monitoring, threat detection, and risk mitigation, ensuring your organization remains secure.",
+      "Cyber threats are constantly evolving, and businesses need proactive, standards-based security to stay protected. Our managed security services provide continuous monitoring, threat detection, endpoint protection, and incident response aligned with NIST Cybersecurity Framework best practices. We help ensure your environment remains secure, resilient, and ready for emerging threats.",
   },
   {
     icon: <CloudOff size={40} />,
     title: "Data Backup & Disaster Recovery",
     description:
-      "Unexpected data loss or system failures can bring business operations to a halt. Our data backup and disaster recovery solutions ensure your critical information is protected, accessible, and quickly restorable in the event of an emergency.",
+      "Unexpected data loss or system failures can halt business operations. Our backup and disaster recovery solutions ensure your critical information is encrypted, replicated, and rapidly recoverable. We design recovery strategies aligned with NIST recommendations for data integrity and business continuity, keeping your organization prepared for any disruption.",
   },
   {
     icon: <ShieldAlert size={40} />,
     title: "Security Assessments",
     description:
-      "Understanding your security posture is the first step to strengthening your defenses. Our comprehensive security assessments identify vulnerabilities, ensure compliance readiness, and provide actionable insights to improve your overall cybersecurity resilience.",
+      "Understanding your security posture is the first step toward strengthening your defenses. Our comprehensive assessments evaluate vulnerabilities, user access, network security, and policy maturity using NIST 800-171 and NIST CSF standards as our baseline. We deliver clear remediation plans and actionable insights to enhance compliance readiness and reduce organizational risk.",
   },
   {
     icon: <BadgeCheck size={40} />,
     title: "CMMC Compliance",
     description:
-      "Industry regulations are complex, but compliance doesn’t have to be overwhelming. We work closely with your team to navigate CMMC requirements, implement security controls, and achieve certification, ensuring your organization meets industry standards.",
+      "CMMC requirements can be complex, but compliance doesn’t have to be overwhelming. We guide your organization through each phase of CMMC 2.0 readiness—performing gap analyses, implementing required security controls, updating documentation, and preparing for third-party assessments. Our approach is grounded in NIST 800-171, ensuring you meet DoD cybersecurity expectations with confidence.",
   },
 ];
+
 
 export default function ProtectPage() {
   return (
