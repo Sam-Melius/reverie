@@ -79,7 +79,7 @@ export default function Header() {
                     href="/services/protect"
                     icon={<ShieldCheck className="w-6 h-6" />}
                     title="Protect"
-                    desc="We protect your critical data, systems, and networks with advanced cybersecurity solutions."
+                    desc="We protect your data and systems with advanced cybersecurity built for NIST and CMMC readiness."
                   />
                   <DropdownItem
                     href="/services/innovate"
