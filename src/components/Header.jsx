@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-[color:var(--accent)/10]">
       <div
-        className={`max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ${roboto.className}`}
+        className={` mx-auto px-6 py-4 flex justify-between items-center ${roboto.className}`}
       >
         
         {/* Logo + Name */}
