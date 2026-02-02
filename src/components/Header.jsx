@@ -165,6 +165,9 @@ export default function Header() {
           {/* <Link href="/conference" className={navLink(pathname, "/conference")}>
             Conference
           </Link> */}
+          <Link href="/amada" className={navLink(pathname, "/amada")}>
+            Amada
+          </Link>
           <Link href="/blog" className={navLink(pathname, "/blog")}>
             Blog
           </Link>
