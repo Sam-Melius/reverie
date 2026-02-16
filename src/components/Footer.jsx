@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Linkedin, Mail, MapPin } from "lucide-react";
+import { Facebook, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -61,6 +61,7 @@ export default function Footer() {
           <h4 className="text-lg font-semibold text-[color:var(--accent)]"><Link href="/contact">Contact</Link></h4>
           <ul className="space-y-2 text-white/70">
             <li className="flex items-center gap-2"><Mail size={16} /> info@reverietech.com</li>
+            <li className="flex items-center gap-2"><Phone size={16} />(801) 805-6661</li>
             <li className="flex items-center gap-2"><MapPin size={16} /> 2312 School Ln, Suite 202, Bedford, TX 76021</li>
             <li className="flex items-center gap-2"><MapPin size={16} /> 11285 State St Salem OR 97317</li>
           </ul>
