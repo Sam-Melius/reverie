@@ -283,11 +283,11 @@ export default function AmadaClientPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 text-left max-w-3xl mx-auto">
           <div className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-[color:var(--accent-alt)]" />
-            <span className="text-white/80">support@reverietech.com</span>
+            <span className="text-white/80">sales@reverietech.com</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone className="w-5 h-5 text-[color:var(--accent-alt)]" />
-            <span className="text-white/80">(XXX) XXX-XXXX</span>
+            <span className="text-white/80">(801) 805-6661</span>
           </div>
         </div>
 
